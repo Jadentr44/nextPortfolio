@@ -7,7 +7,7 @@ export default function ProjectCard({z,type,name}) {
   const [xOffset, setOffset] = useState("0%");
 
   return (
-    <div style={{backgroundSize:"100% 10.5vh", zIndex:1}} className=" bg-no-repeat bg-botst border-2 border-red-500 min-w-[15vw] max-w-[15vw] h-fit">
+    <div style={{backgroundSize:"100% 10.5vh", zIndex:1}} className=" bg-no-repeat bg-botst border-2 border-red-500 rounded-b-lg min-w-[15vw] max-w-[15vw] h-fit">
       <div className="h-[7vh] invisible">a</div>
 
       <div className="flex items-center">
