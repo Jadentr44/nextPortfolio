@@ -12,7 +12,7 @@ export default function Links() {
       onMouseOver={()=> setGit(true)}
       onMouseOut={()=>setGit(false)}
       whileHover={{x:"60%"}}
-      className=' cursor-pointer flex justify-end absolute bottom-2 left-[-40%] px-2 py-1 rounded-r-full bg-red-500 w-[55%]'>
+      className=' border-2 border-black cursor-pointer flex justify-end absolute bottom-2 left-[-40%] px-2 py-1 rounded-r-full bg-red-500 w-[55%]'>
       <h1 className='mr-2 text-white'>{!gitHover?"":"Github"}</h1><Github />
       </motion.div>
 
@@ -20,7 +20,7 @@ export default function Links() {
       whileHover={{x:"-60%"}}
       onMouseOver={()=> setVisit(true)}
       onMouseOut={()=>setVisit(false)}
-      className=' cursor-pointer flex  absolute bottom-2 right-[-40%] px-2 py-1 rounded-l-full bg-red-500 w-[55%]'>
+      className='border-2 border-black cursor-pointer flex  absolute bottom-2 right-[-40%] px-2 py-1 rounded-l-full bg-red-500 w-[55%]'>
       <Website/><h1 className='ml-2 text-white'>{!visitHover?"":"Visit"}</h1>
       </motion.div>
     </div>
