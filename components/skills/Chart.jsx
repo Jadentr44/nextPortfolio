@@ -10,11 +10,11 @@ export default function Chart({ setSkills }) {
     { title: "FrontEnd", value: 25, color: "#E38627" },
   ];
   return (
-    <div className="border-2 w-fit h-fit ">
+    <div className="w-fit h-fit ">
       <PieChart
         data={pieData}
         animate
-        animationDuration={1200}
+        animationDuration={1600}
         style={{ height: "30vw", width: "30vw" }}
         
         label={({ dataEntry }) => dataEntry.title}
