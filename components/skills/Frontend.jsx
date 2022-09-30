@@ -14,7 +14,7 @@ export default function Frontend({size}) {
   ]
   return (
     <div className="w-fit max-w-[30vw] h-fit  ">
-      <div className=' max-w-[20vw]  ml-auto mr-auto'>
+      <div className='sm:invisible md:visible max-w-[20vw]  ml-auto mr-auto'>
       <PieChart
    
    rounded
