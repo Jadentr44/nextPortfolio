@@ -1,7 +1,7 @@
 import React,{useState} from 'react'
 import Typewriter from 'typewriter-effect';
 import { Down } from './icons';
-export default function Splash() {
+export default function Splash({scrollSkills}) {
   const [main,setMain] = useState(null)
   const [seeArrow,setArrow] = useState(false)
   const easeIn = {opacity: 1, transition: "opacity 500ms ease-in"};
@@ -63,7 +63,7 @@ export default function Splash() {
       </div>
       
       
-      <div style={seeArrow?easeIn:empty} className='absolute animate-bounce bottom-[5vw] opacity-0 transition-opacity'><Down size={"3vw"} /></div>
+      <div onClick={()=> scrollSkills()} style={seeArrow?easeIn:empty} className='absolute animate-bounce bottom-[5vw] opacity-0 transition-opacity'><Down size={"3vw"} /></div>
       
     </div>
   )
