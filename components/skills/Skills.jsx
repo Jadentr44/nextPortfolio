@@ -2,6 +2,7 @@ import React,{useState,useRef}   from 'react'
 import IsVisible  from 'react-is-visible'
 import Chart from './Chart'
 import Frontend from './Frontend'
+import Arrow from './icons/Arrow'
 export default function Skill() {
   const [skills,setSkills] = useState(undefined)
   const [showCart, setChart] = useState(false)
@@ -27,6 +28,7 @@ export default function Skill() {
 
       
       {renderSkills()}
+      
     </div>
   )
 }
