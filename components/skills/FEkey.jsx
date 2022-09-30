@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
 import { Html,Css,Javascript,Bootstrap,SJquery,TailWind, FaReact } from './icons/frontend'
-import Bar from './bar'
+import Bar from './Bar'
 export default function FEkey({size}) {
   return (
     <div className='flex flex-wrap justify-between max-w-[30vw]'>
