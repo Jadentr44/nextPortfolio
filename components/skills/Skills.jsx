@@ -1,5 +1,5 @@
 import React,{useState} from 'react'
-import Chart from './chart'
+import Chart from './Chart'
 import Frontend from './Frontend'
 export default function Skill() {
   const [skills,setSkills] = useState(undefined)

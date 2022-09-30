@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React, { useState,useEffect, useRef } from "react";
 import Links from "./Links";
-import BOTST from '../../public/BOTST.jpg'
+// import BOTST from '../../public/BOTST.jpg'
 import { motion } from "framer-motion";
 
 export default function ProjectCard({z,type,name}) {
@@ -10,8 +10,8 @@ export default function ProjectCard({z,type,name}) {
   return (
     <div style={{ zIndex:1}} className="bg-red-400  border-2 border-black rounded-lg lg-min-w-[15vw]  max-w-[15vw] h-fit">
       
-      <div className=" ">
-        <Image style={{zIndex:-5}} className='rounded-t-lg'  layout="responsive" width={750} height={375} src={BOTST} />
+      <div style={{backgroundSize:'100% 100%'}} className="  bg-no-repeat bg-botst h-[12vh] w-full ">
+        
         
         </div>
 
