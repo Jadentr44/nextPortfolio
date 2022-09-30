@@ -1,9 +1,13 @@
 import Skill from "../components/skills/Skills";
 import Projects from "../components/projects/Projects";
+import Splash from '../components/home/Splash'
 
 export default function Home() {
   return (
-    <div className=" z-20">
+    <div className="">
+      <section>
+        <Splash />
+      </section>
       <section>
       skills:
     <Skill />
@@ -13,6 +17,8 @@ export default function Home() {
     projects:
     <Projects />
       </section>
+
+
     </div>
   )
 }
