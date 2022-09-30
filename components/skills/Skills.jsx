@@ -8,8 +8,8 @@ export default function Skill() {
   
   function renderSkills(){
     if(skills === "FrontEnd")  return <Frontend size={"8vw"} />
-    if(skills === "BackEnd")  return "backend"
-    if(skills === "Other")  return "other"
+    if(skills === "BackEnd")  return <div className='w-[30vw]'>BackEnd</div>
+    if(skills === "Other")  return <div className='w-[30vw]'>Other</div>
     return <div className='w-[30vw]'>skills</div>
   }
   return (

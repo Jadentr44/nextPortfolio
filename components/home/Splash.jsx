@@ -9,7 +9,7 @@ export default function Splash() {
   return (
     <div style={{backgroundSize:"100% 100%"}}  className="relative flex justify-center items-center  h-screen w-screen bg-opacity-10 bg-splash bg-no-repeat overflow-x-hidden">
       <div className='text-white'>
-      <h1 className='text-6xl '>
+      <h1 className='text-6xl text-center'>
         {main
         ?main
       :
@@ -25,7 +25,7 @@ export default function Splash() {
       }
        </h1> 
 
-        <div className='w-full text-center '>
+        <div className='w-full text-center mt-4 text-lg'>
       {!main
       ?<div className=' invisible'>filler</div>
     :
@@ -42,6 +42,7 @@ export default function Splash() {
     .deleteChars(16)
     .typeString("new colleague???")
     .pauseFor(1000)
+    .changeDeleteSpeed(12)
     .deleteAll()
     .typeString("come find out")
     .callFunction(() => {
