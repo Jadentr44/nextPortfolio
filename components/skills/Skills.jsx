@@ -8,7 +8,7 @@ export default function Skill() {
   const [showCart, setChart] = useState(false)
   
   function renderSkills(){
-    if(skills === "FrontEnd")  return <Frontend size={"8vw"} />
+    if(skills === "FrontEnd")  return <Frontend size={"4vw"} />
     if(skills === "BackEnd")  return <div className='w-[30vw]'>BackEnd</div>
     if(skills === "Other")  return <div className='w-[30vw]'>Other</div>
     return <div className='w-[30vw]'>skills</div>
@@ -28,6 +28,7 @@ export default function Skill() {
 
       
       {renderSkills()}
+      
       
     </div>
   )

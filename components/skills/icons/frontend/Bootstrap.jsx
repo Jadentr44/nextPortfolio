@@ -3,8 +3,8 @@ import * as React from "react";
 function Bootstrap({ size }) {
   return (
     <svg
-      stroke="currentColor"
-      fill="currentColor"
+      stroke="purple"
+      fill="purple"
       strokeWidth={0}
       viewBox="0 0 16 16"
       height={size}

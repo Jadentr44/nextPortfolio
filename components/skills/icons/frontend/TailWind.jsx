@@ -4,7 +4,7 @@ function Tailwind({size}) {
   return (
     <svg
       stroke="currentColor"
-      fill="currentColor"
+      fill="lightblue"
       strokeWidth={0}
       role="img"
       viewBox="0 0 24 24"
