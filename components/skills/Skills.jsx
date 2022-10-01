@@ -37,7 +37,7 @@ export default function Skill() {
       </div>
       
 
-      <div className='border-2 max-h-[75vh]'>
+      <div className=' max-h-[75vh]'>
         <div className='hidden md:block'>
 
       {renderSkillsPie()}
