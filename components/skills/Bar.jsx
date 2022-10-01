@@ -12,8 +12,8 @@ export default function Bar({name,color}) {
     }, (time*100+400))
   },[]);
   return (
-    <div>
-        {name}
+    <div className='ml-2'>
+        <p className='text-center'>{name}</p>
         <div onMount className='w-[100px] relative border-2 border-black h-5 rounded-full'>
         <motion.div
         transition={{ ease: "easeOut", duration: .8 }}

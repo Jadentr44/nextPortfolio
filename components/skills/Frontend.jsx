@@ -1,7 +1,7 @@
 import React from 'react'
 import FEkey from './FEkey'
 import { PieChart } from 'react-minimal-pie-chart'
-export default function Frontend({size}) {
+export default function Frontend({}) {
   const pieData = [
     { title: "HTML", value: 1, color: "#f97316" },
     { title: "CSS", value: 1, color: "#0ea5e9" },
@@ -13,8 +13,8 @@ export default function Frontend({size}) {
     {title:"React", value:1, color:"#0e7490"}
   ]
   return (
-    <div className="w-fit max-w-[30vw] h-fit  ">
-      <div className='sm:invisible md:visible max-w-[20vw]  ml-auto mr-auto'>
+    <div className="w-fit max-w-[20vw]  h-[30vw] ml-auto mr-auto">
+    
       <PieChart
    
    rounded
@@ -32,9 +32,9 @@ export default function Frontend({size}) {
    labelPosition={0}
    
  />
-      </div>
+      
    
-    <FEkey size={size} />
+   
   </div>
   )
 }
