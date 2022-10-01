@@ -7,8 +7,8 @@ export default function Skill() {
   const [skills,setSkills] = useState(undefined)
   const [showCart, setChart] = useState(false)
   
-  function renderSkillsPie(){
-    if(skills === "FrontEnd")  return <Frontend  />
+  function renderSkillsPie(size){
+    if(skills === "FrontEnd")  return <Frontend size={size} />
     if(skills === "BackEnd")  return <div className='w-[30vw]'>BackEnd</div>
     if(skills === "Other")  return <div className='w-[30vw]'>Other</div>
     return <div className='w-[30vw] h-[30vw]'></div>
@@ -21,15 +21,25 @@ export default function Skill() {
     return <div className='w-[30vw] h-[30vw]'>skills</div>
   }
   return (
+    <div>
+      <h1 className='text-center text-6xl absolute top-4 inset-x-0 mx-auto'>Skills</h1>
+    
     <div className='mx-[10%] flex justify-around min-h-screen items-center '>
       <div>
+        <div className='hidden md:block'>
         {showCart
-        ? <Chart setSkills={setSkills} />
+        ? <Chart size={30} setSkills={setSkills} />
       :<div className='w-[30vw] h-[30vw]'></div>}
+        </div>
+
+        <div className='block md:hidden'>
+        {showCart
+        ? <div><Chart size={40} setSkills={setSkills} /> {renderSkillsPie(50)} </div>
+      :<div className='w-[30vw] h-[60vh]'></div>}
+        </div>
+        
       
-      {showCart
-        ? <div className='block md:hidden'> {renderSkillsPie()}</div>
-      :<div className='hidden md:block w-[30vw] h-[30vw]'></div>}
+      
 
       <IsVisible once>
       {(isVisible) => <h1>{isVisible ? setChart(true) : ``}</h1>}
@@ -46,6 +56,7 @@ export default function Skill() {
       </div>
       
       
+    </div>
     </div>
   )
 }

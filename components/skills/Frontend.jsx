@@ -1,7 +1,7 @@
 import React from 'react'
 import FEkey from './FEkey'
 import { PieChart } from 'react-minimal-pie-chart'
-export default function Frontend({}) {
+export default function Frontend({size}) {
   const pieData = [
     { title: "HTML", value: 1, color: "#f97316" },
     { title: "CSS", value: 1, color: "#0ea5e9" },
@@ -27,7 +27,7 @@ export default function Frontend({}) {
      fontSize: "5px",
      fontFamily: "sans-serif",
    })}
-   radius={48}
+   radius={size}
    lineWidth={20}
    labelPosition={0}
    

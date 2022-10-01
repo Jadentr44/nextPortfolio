@@ -20,8 +20,8 @@ export default function Home() {
         <Splash scrollSkills={scrollSkills} />
       </section>
       
-      <section ref={skillSection}>
-      skills:
+      <section className="relative" ref={skillSection}>
+      
     <Skill />
       </section>
 

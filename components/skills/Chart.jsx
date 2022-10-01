@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { PieChart } from "react-minimal-pie-chart";
-export default function Chart({ setSkills }) {
+export default function Chart({ setSkills,size }) {
   const [selected, setSelected] = useState(undefined);
   const [clicked, setClicked] = useState(false);
-  const segmentsStyle = { transition: "stroke 1s ease-in-out", cursor: "pointer" };
+  const segmentsStyle = {  cursor: "pointer" };
   const pieData = [
-    { title: "Other", value: 9, color: "#6A2135" },
-    { title: "BackEnd", value: 20, color: "#C13C37" },
-    { title: "FrontEnd", value: 25, color: "#E38627" },
+    { title: "Other", value: 9, color: "lightgray",real:"red" },
+    { title: "BackEnd", value: 20, color: "lightgray",real:"green" },
+    { title: "FrontEnd", value: 25, color: "lightgray",real:"lightblue" },
   ];
   return (
     <div className="w-fit h-fit ">
@@ -19,28 +19,28 @@ export default function Chart({ setSkills }) {
         
         label={({ dataEntry }) => dataEntry.title}
         labelStyle={(index) => ({
-          fill: pieData[index].color,
+          fill: "black",
           fontSize: "5px",
           fontFamily: "sans-serif",
         })}
-        radius={30}
+        radius={size}
         lineWidth={83}
         labelPosition={115}
         segmentsStyle={(index) => {
           return index === selected
-            ? {...segmentsStyle , strokeWidth: 28 }
+            ? {...segmentsStyle , strokeWidth: 28, stroke:pieData[index].real }
             : segmentsStyle;
         }}
         onMouseOver={(_, index) => {
           if (!clicked) {
             setSelected(index);
-            setSkills(pieData[index].title);
+            // setSkills(pieData[index].title);
           }
         }}
         onMouseOut={(_, index) => {
           if (!clicked) {
             setSelected(undefined);
-            setSkills(undefined);
+            // setSkills(undefined);
           }
         }}
         onClick={(_, index) => {
