@@ -1,39 +1,37 @@
 import React, { useState } from "react";
 import { PieChart } from "react-minimal-pie-chart";
 
-export default function Chart({ setSkills,size,width }) {
+export default function Chart({ setSkills, size, width }) {
   const [selected, setSelected] = useState(undefined);
   const [clicked, setClicked] = useState(undefined);
-  const segmentsStyle = {  cursor: "pointer" };
+  const segmentsStyle = { cursor: "pointer" };
   const pieData = [
-    { title: "Other", value: 9, color: "lightgray",real:"red" },
-    { title: "BackEnd", value: 20, color: "lightgray",real:"green" },
-    { title: "FrontEnd", value: 25, color: "lightgray",real:"lightblue" },
+    { title: "Other", value: 9, color: "lightgray", real: "red" },
+    { title: "BackEnd", value: 20, color: "lightgray", real: "green" },
+    { title: "FrontEnd", value: 25, color: "lightgray", real: "lightblue" },
   ];
   return (
-    <div style={{Width:`${width}vw`,height:`${width}vw`}} >
+    <div className="w-[40vw] xl:w-[25vw] h-[40vw] xl:h-[25vw] ">
       <PieChart
         data={pieData}
         animate
         animationDuration={1600}
         style={{ height: "100%", width: "100%" }}
-        
         radius={40}
         lineWidth={100}
         // segmentsStyle={{ transition: 'stroke .3s', cursor: 'pointer' }}
         segmentsStyle={(index) => {
           return index === selected
-            ? { ...segmentsStyle,stroke:pieData[index].real }
+            ? { ...segmentsStyle, stroke: pieData[index].real }
             : segmentsStyle;
         }}
         segmentsShift={(index) => (index === clicked ? 6 : 1)}
-        
         label={({ dataEntry }) => dataEntry.title}
         labelPosition={100 - 100 / 2}
         labelStyle={{
-          fill: 'black',
-          pointerEvents: 'none',
-          fontSize:'3px'
+          fill: "black",
+          pointerEvents: "none",
+          fontSize: "3px",
         }}
         onMouseOver={(_, index) => {
           if (!clicked) {
