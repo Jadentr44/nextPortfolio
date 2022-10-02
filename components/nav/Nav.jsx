@@ -44,7 +44,7 @@ export default function Nav() {
             </div>
           </div>
          
-            <ul className="flex flex-col justify-around  py-[5vh] items-center cursor-pointer">
+            <ul onClick={()=> setNav(false)} className="flex flex-col justify-around  py-[5vh] items-center cursor-pointer text-white">
               <li className=" border-t-[1px] border-opacity-50 border-gray-100 w-full text-center py-5  hover:bg-[#ed2b2b] text-5xl"><p className=" ">Home</p></li>
               <li className=" border-t-[1px] border-opacity-50 border-gray-100 w-full text-center py-5  hover:bg-[#ed2b2b] text-5xl"><p className=" ">About me</p></li>
               <li className=" border-t-[1px] border-opacity-50 border-gray-100 w-full text-center py-5  hover:bg-[#ed2b2b] text-5xl"><p className=" ">Skills</p></li>
@@ -85,6 +85,19 @@ export default function Nav() {
               <Linkedin size={"11vw"} />
               Linkedin
             </div>
+          </div>
+          <ul onClick={()=> setNav(false)} className="flex flex-col justify-around  mt-[3vh] items-center cursor-pointer text-white">
+              <li className=" border-t-[1px] border-opacity-50 border-gray-100 w-full text-center py-5  hover:bg-[#ed2b2b] text-3xl"><p className=" ">Home</p></li>
+              <li className=" border-t-[1px] border-opacity-50 border-gray-100 w-full text-center py-5  hover:bg-[#ed2b2b] text-3xl"><p className=" ">About me</p></li>
+              <li className=" border-t-[1px] border-opacity-50 border-gray-100 w-full text-center py-5  hover:bg-[#ed2b2b] text-3xl"><p className=" ">Skills</p></li>
+              <li className=" border-y-[1px] border-opacity-50 border-gray-100 w-full text-center py-5  hover:bg-[#ed2b2b] text-3xl"><p className=" ">Projects</p></li>
+              <li className=" border-y-[1px] border-opacity-50 border-gray-100 w-full text-center py-5  hover:bg-[#ed2b2b] text-3xl"><p className=" ">Contact me</p></li>
+              
+              
+            </ul>
+          <div className="fixed bottom-0 w-[60vw]">
+            <p className="text-center mb-3">made with:</p>
+            <div className="flex justify-around"><FaReact size={"4rem"}/><Next size={"4rem"}/><Tailwind size={"4rem"}/></div>
           </div>
         </div>
       </div>
