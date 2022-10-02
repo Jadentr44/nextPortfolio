@@ -20,7 +20,7 @@ export default function Nav() {
         style={nav ? openNav : smClosedNav}
         className={`fixed flex top-0 bottom-0 invisible xl:visible `}
       >
-        <Hamburger setNav={setNav} nav={nav} size={"50"} />
+        <Hamburger setNav={setNav} nav={nav} size={"4rem"} />
         <div className="bg-red-100 h-screen min-w-[20vw] border-l-2 border-black z-0 ">
           <div className="mx-[10%] mt-4 flex flex-wrap justify-between">
             <div className="text-center w-fit">
@@ -48,7 +48,7 @@ export default function Nav() {
         style={nav ? openNav : mdClosedNav}
         className={`fixed flex top-0 bottom-0 xl:invisible sm:visible`}
       >
-        <Hamburger setNav={setNav} nav={nav} size={"35"} />
+        <Hamburger setNav={setNav} nav={nav} size={"3rem"} />
         <div className="bg-red-600 h-screen min-w-[60vw] border-l-2 border-black z-0 ">
           <div className="mx-[10%] mt-4 flex flex-wrap justify-between">
             <div className="text-center w-fit">
