@@ -1,45 +1,47 @@
 import React,{useState,useRef}   from 'react'
 import IsVisible  from 'react-is-visible'
 import Chart from './Chart'
-import Frontend from './Frontend'
+import SkillChart from './SkillChart'
+import FEchart from './FEchart'
 import FEkey from './FEkey'
+import BEchart from './BEchart'
+import BEkey from './BEkey'
 export default function Skill() {
   const [skills,setSkills] = useState(undefined)
   const [showCart, setChart] = useState(false)
+ 
   
-  function renderSkillsPie(size){
-    if(skills === "FrontEnd")  return <Frontend size={size} />
-    if(skills === "BackEnd")  return <div className='w-[30vw]'>BackEnd</div>
-    if(skills === "Other")  return <div className='w-[30vw]'>Other</div>
-    return <div className='w-[30vw] h-[30vw]'></div>
+
+  function renderSkillsPie(width){
+    if(skills === "FrontEnd")  return <FEchart />
+    if(skills === "BackEnd")  return <BEchart/>
+    if(skills === "Other")  return <div className='w-[40vw]'>Other</div>
+    return <div className='w-[40vw] h-[40vw] flex justify-center items-center'>Choose a Skill</div>
   }
 
   function renderSkillsKey(){
     if(skills === "FrontEnd")  return <FEkey size={"45"} />
-    if(skills === "BackEnd")  return <FEkey size={"45"} />
+    if(skills === "BackEnd")  return <BEkey size={"45"} />
     if(skills === "Other")  return <FEkey size={"45"} />
-    return <div className='w-[30vw] h-[30vw]'>skills</div>
+    return <div className='  '></div>
   }
   return (
-    <div>
+    <div className='red'>
       <h1 className='text-center text-6xl absolute top-4 inset-x-0 mx-auto'>Skills</h1>
     
-    <div className='mx-[10%] flex justify-around min-h-screen items-center '>
-      <div>
+    <div className='mx-[10%] flex flex-col md:flex-row justify-center md:justify-around min-h-screen items-center '>
+      {/* 1 */}
+      <div className='w-full'>
+        {/* large screen */}
         <div className='hidden md:block'>
-        {showCart
-        ? <Chart size={30} setSkills={setSkills} />
-      :<div className='w-[30vw] h-[30vw]'></div>}
+        <Chart width={25} setSkills={setSkills}  />
         </div>
 
-        <div className='block md:hidden'>
-        {showCart
-        ? <div><Chart size={40} setSkills={setSkills} /> {renderSkillsPie(50)} </div>
-      :<div className='w-[30vw] h-[60vh]'></div>}
-        </div>
-        
-      
-      
+      {/* small screen */}
+    <div className='flex justify-around w-full  md:hidden'>
+    <Chart width={40} setSkills={setSkills}  />
+    {renderSkillsPie(40)}
+    </div>
 
       <IsVisible once>
       {(isVisible) => <h1>{isVisible ? setChart(true) : ``}</h1>}
@@ -47,16 +49,18 @@ export default function Skill() {
       </div>
       
 
-      <div className=' max-h-[75vh]'>
-        <div className='hidden md:block'>
-
-      {renderSkillsPie()}
+    {/* 2 */}
+      <div className='w-[40vw] max-h-[75vh]'>
+        <div className='hidden md:flex '>
+        {renderSkillsPie(40)}
         </div>
-      {renderSkillsKey()}
+        <div className='h-12'></div>
+        {renderSkillsKey()}
       </div>
       
       
     </div>
+
     </div>
   )
 }

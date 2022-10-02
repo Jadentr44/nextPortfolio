@@ -3,7 +3,7 @@ import { Html,Css,Javascript,Bootstrap,SJquery,TailWind, FaReact } from './icons
 import Bar from './Bar'
 export default function FEkey({size}) {
   return (
-    <div className='flex flex-wrap justify-between max-w-[30vw]'>
+    <div className='flex flex-wrap justify-between md:justify-around  w-full md:w-[40vw] max-h-[30vw]'>
 
       <div className='flex  mx-3 my-2'>
         <Html size={size} />
