@@ -12,7 +12,7 @@ export default function BEchart() {
   ];
 
   return (
-    <div className=" w-[40vw] xl:w-[25vw] h-[40vw] xl:h-[25vw] border-2    ml-auto mr-auto relative">
+    <div className=" w-[40vw] xl:w-[25vw] h-[40vw] xl:h-[25vw]    ml-auto mr-auto relative">
       <div className="absolute top-0 h-full w-full">
         <PieChart
           data={BEskills}

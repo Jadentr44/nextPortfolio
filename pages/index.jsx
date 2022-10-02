@@ -13,14 +13,14 @@ export default function Home() {
     });
   }
   return (
-    <div className="relative overflow-x-hidden max-w-[100vw] bg-white">
+    <div className="relative overflow-x-hidden  bg-white">
       <Nav />
 
       <section >
         <Splash scrollSkills={scrollSkills} />
       </section>
       
-      <section className="relative" ref={skillSection}>
+      <section className="mt-[5vh]" ref={skillSection}>
       
     <Skill />
       </section>

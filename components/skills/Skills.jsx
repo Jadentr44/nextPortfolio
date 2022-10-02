@@ -25,20 +25,23 @@ export default function Skill() {
     if (skills === "FrontEnd") return <FEkey size={"45"} />;
     if (skills === "BackEnd") return <BEkey size={"45"} />;
     if (skills === "Other") return <FEkey size={"45"} />;
-    return <div className="  "></div>;
+    return <div className=" h-[30vw] xl:h-0"></div>;
   }
   return (
-    <div className="red">
-      <h1 className="text-center text-6xl absolute top-4 inset-x-0 mx-auto">
+    <div className="">
+      <h1 className="text-center text-6xl w-full text-black">
         Skills
       </h1>
 
-      <div className="mx-[10%] flex flex-col xl:flex-row justify-center xl:justify-around min-h-screen items-center ">
+      <div className="mx-[10%] flex flex-col xl:flex-row justify-around xl:justify-around min-h-screen items-center ">
         {/* 1 */}
-        <div className="w-full">
+        <div className="w-fit">
           {/* large screen */}
           <div className="hidden xl:block">
-            <Chart width={25} setSkills={setSkills} />
+            {!showCart
+            ?<div className="w-[25vw] h-[30vw]"></div>
+          :
+            <Chart width={25} setSkills={setSkills} />}
           </div>
 
           {/* small screen */}

@@ -66,9 +66,12 @@ export default function Splash({ scrollSkills }) {
       <div
         onClick={() => scrollSkills()}
         style={seeArrow ? easeIn : empty}
-        className="absolute animate-bounce bottom-[3rem]"
+        className="absolute animate-bounce  bottom-[3rem]"
       >
-        <Down size={"60"} />
+        
+
+        <Down color={"#ef4444"} size={"5rem"} />
+        
       </div>
     </div>
   );
