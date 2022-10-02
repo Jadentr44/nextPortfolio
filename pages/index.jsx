@@ -13,7 +13,7 @@ export default function Home() {
     });
   }
   return (
-    <div className="relative overflow-x-hidden bg-white">
+    <div className="relative overflow-x-hidden max-w-[100vw] bg-white">
       <Nav />
 
       <section >
