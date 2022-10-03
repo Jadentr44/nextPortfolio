@@ -25,7 +25,7 @@ export default function Home() {
     <Skill />
       </section>
 
-      <section >
+      <section className="">
     projects:
     <Projects />
       </section>

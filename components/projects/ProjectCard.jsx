@@ -1,30 +1,58 @@
-import Image from "next/image";
-import React, { useState,useEffect, useRef } from "react";
+import Arrow from "./icons/arrow";
+import React, { useState, useEffect, useRef } from "react";
 import Links from "./Links";
 // import BOTST from '../../public/BOTST.jpg'
 import { motion } from "framer-motion";
 
-export default function ProjectCard({z,type,name}) {
-  const [xOffset, setOffset] = useState("0%");
-
+export default function ProjectCard({ tech, name,desc,path}) {
+  const [imgW, setW] = useState("85%");
+  const [arrowDeg, setArrow] = useState("0deg");
+  const [arrowHover, setHover] = useState(false);
+  const [animation, setAnimation] = useState("tween");
+  const url = `url('${path}')`
+  console.log(url)
   return (
-    <div style={{ zIndex:1}} className="bg-red-400  border-2 border-black rounded-lg lg-min-w-[15vw]  max-w-[15vw] h-fit">
-      
-      <div style={{backgroundSize:'100% 100%'}} className="  bg-no-repeat bg-botst h-[12vh] w-full ">
+    <div
+      style={{ zIndex: 1 }}
+      className="bg-red-400  border-4 border-black rounded-lg flex relative w-[70vw] lg:w-[36vw]  min-h-[25vh] h-fit lg:min-h-[18vw] lg:h-full z-10  text-white"
+    >
+      <motion.div
+        animate={{ width: imgW }}
+        transition={{type:"tween"}}
+        style={{ backgroundSize: "auto 100%",backgroundImage:url }}
         
+        className={` h-full   absolute left-0 z-10`}
+      ></motion.div>
+      <motion.div
+        animate={{ marginLeft: imgW }}
+        transition={{type:"tween"}}
+
+        className="absolute flex flex-col justify-center items-center h-full  w-1  z-20  left-0 right-0 text-wh"
+      >
+        <div className="h-full w-1 bg-gray-400"></div>
+        <motion.div
+          animate={{ rotate: arrowDeg }}
+          onClick={() => {
+            imgW == "85%" ? setW("0%") : setW("85%");
+            imgW == "85%" ? setArrow("180deg") : setArrow("0deg");
+          }}
+          className="border-2 h-8 w-10 lg:h-14 lg:w-20 rounded-full p-2 bg-white cursor-pointer  text-black"
+        >
+          <Arrow />
+        </motion.div>
+        <div className="h-full w-1 bg-gray-400"></div>
+      </motion.div>
+      <div className="w-full min-h-full px-[15%] bg-red-500 ">
+        <h1 className="text-center text-md lg:text-xl max-w-[80%]  mx-auto">{name}</h1>
+        <h2 className="text-center text-sm lg:text-lg my-2 lg:my-3 font-bold">
+        {tech.map((e,i)=>{
+          return i==0?`| ${e} |`:` ${e} |`
+        })}
+        </h2>
         
-        </div>
-
-      <div  className="flex  items-center mt-[-3.5vh]">
-
-      <div className="w-full bg-red-500 border-2 border-red-500"></div>
-      <div style={{backgroundSize:'102% 100%'}} className=" bg-logo  bg-no-repeat w-[8vw] h-[7vh] border-2 border-red-500 flex justify-center items-center  rounded-[50%]"></div> 
-      <div className="w-full bg-red-500 border-2 border-red-500"></div>
+        <p className="text-sm lg:text-md xl:text-lg ">{desc}</p>
+       
       </div>
-
-      <h1 className="text-white text-xl mx-[10%] text-center">Battle of the Shadow Tomb</h1>
-    <p className="text-white px-3 text-center my-4 mb-12">A simple web game that allows you  to play a back and forth fighting game online</p>
-    <Links/>
-    </div>  
+    </div>
   );
 }
