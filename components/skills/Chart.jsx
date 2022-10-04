@@ -15,7 +15,7 @@ export default function Chart({ setSkills, size, width }) {
       <PieChart
         data={pieData}
         animate
-        animationDuration={1600}
+        animationDuration={800}
         style={{ height: "100%", width: "100%" }}
         radius={40}
         lineWidth={100}

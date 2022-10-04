@@ -39,9 +39,10 @@ export default function BEchart() {
           label={({ dataEntry }) => "Back-end"}
           labelPosition={0}
           labelStyle={{
-            fill: "black",
+            fill: "#EF4444",
             pointerEvents: "none",
             fontSize: "10",
+            fontFamily: 'Alfa Slab One, cursive'
           }}
         />
       </div>

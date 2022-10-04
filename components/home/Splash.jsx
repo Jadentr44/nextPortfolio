@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Typewriter from "typewriter-effect";
 import { Down } from "./icons";
-export default function Splash({ scrollSkills }) {
+export default function Splash({ scrollAbout }) {
   const [main, setMain] = useState(null);
   const [seeArrow, setArrow] = useState(false);
   const easeIn = { opacity: 1, transition: "opacity 500ms ease-in" };
@@ -64,7 +64,7 @@ export default function Splash({ scrollSkills }) {
       </div>
 
       <div
-        onClick={() => scrollSkills()}
+        onClick={() => scrollAbout()}
         style={seeArrow ? easeIn : empty}
         className="absolute animate-bounce  bottom-[3rem]"
       >

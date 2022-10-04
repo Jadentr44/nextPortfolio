@@ -14,7 +14,7 @@ export default function ProjectCard({ tech, name,desc,path}) {
   return (
     <div
       style={{ zIndex: 1 }}
-      className="bg-red-400  border-4 border-black rounded-lg flex relative w-[70vw] lg:w-[36vw]  min-h-[25vh] h-fit lg:min-h-[18vw] lg:h-full z-10  text-white"
+      className="bg-red-400  border-4 border-black rounded-lg flex relative w-[70vw] lg:w-[36vw]  min-h-[25vh] h-fit lg:min-h-[18vw] lg:h-full z-10  text-white mb-12"
     >
       <motion.div
         animate={{ width: imgW }}

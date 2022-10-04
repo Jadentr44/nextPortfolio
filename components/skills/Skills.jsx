@@ -6,6 +6,7 @@ import FEchart from "./FEchart";
 import FEkey from "./FEkey";
 import BEchart from "./BEchart";
 import BEkey from "./BEkey";
+import { motion } from "framer-motion";
 export default function Skill() {
   const [skills, setSkills] = useState(undefined);
   const [showCart, setChart] = useState(false);
@@ -29,9 +30,20 @@ export default function Skill() {
   }
   return (
     <div className="">
-      <h1 className="text-center text-6xl w-full text-black">
-        Skills
-      </h1>
+
+      <div className="w-1/4  text-6xl text-center mx-auto relative">
+        <motion.div
+        transition={{left:{duration:.8}}}
+        animate={{width:showCart?"0%":"100%"}}
+        className="bg-white h-full absolute  right-0 top-0">
+
+        </motion.div>
+        <div className="w-full bg-red-500 text-white py-2"><h2>skills</h2></div>
+        
+      </div>
+
+
+      
 
       <div className="mx-[10%] flex flex-col xl:flex-row justify-around xl:justify-around min-h-screen items-center ">
         {/* 1 */}

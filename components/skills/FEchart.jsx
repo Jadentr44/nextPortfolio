@@ -40,9 +40,10 @@ export default function FEchart() {
           label={({ dataEntry }) => "Front-end"}
           labelPosition={0}
           labelStyle={{
-            fill: "black",
+            fill: "#EF4444",
             pointerEvents: "none",
             fontSize: "10",
+            fontFamily: 'Alfa Slab One, cursive'
           }}
         />
       </div>
