@@ -19,7 +19,7 @@ export default function Projects() {
         className="bg-[#DFF1FF] h-[103%] absolute  right-[-1px] left-[-1px] bottom-[-1px] top-[-1px] ">
 
         </motion.div>
-        <div className="w-full lg:w-[25vw]  bg-red-500 text-white py-2 "><h2 className=''>About me</h2></div>
+        <div className="w-full lg:w-[25vw] mb-12  bg-red-500 text-white py-2 "><h2 className=''>Projects</h2></div>
         
       </div>
    
