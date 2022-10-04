@@ -50,7 +50,7 @@ export default function AboutMe() {
           <p className='text-xl mb-4'>A full-stack/mobile developer</p>
           <div className='min-h-[70%] h-fit flex flex-col justify-around '>
             <div>
-            <p className='text-lg mb-5'>I'm a <span className='px-7' style={stretched}>flexible</span> Developer who can add a nice UI to your front end, or a complex algorithm to your backend. I stress the small things, in order for a clean bigger picture.</p>
+            <p className='text-lg mb-5'>I&rsquo;m a <span className='px-7' style={stretched}>flexible</span> Developer who can add a nice UI to your front end, or a complex algorithm to your backend. I stress the small things, in order for a clean bigger picture.</p>
             </div>
             <div>
           <p className='text-xl '>Who am I off the Screen?</p>
