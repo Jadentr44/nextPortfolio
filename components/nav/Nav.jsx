@@ -47,7 +47,7 @@ export default function Nav() {
       {/* computer nav */}
       <div
         style={nav ? openNav : smClosedNav}
-        className={`fixed flex top-0 h-screen invisible xl:visible `}
+        className={`fixed flex top-0 h-screen invisible xl:visible  `}
         
       >
         <div onClick={()=>switchNav()} className="  cursor-pointer mt-12 xl:mt-4 mr-[-2px] z-20 px-3  py-2 h-fit w-fit rounded-l-full border-2 border-red-500 border-r-0 bg-red-500 ">
@@ -60,7 +60,7 @@ export default function Nav() {
         </motion.div>
         </div>
         
-        <div className="bg-white h-screen min-w-[20vw] border-l-4 border-red-500  flex flex-col  ">
+        <div className=" h-screen min-w-[20vw] border-l-4 border-red-500 bg-[#8DACE1] flex flex-col  ">
           <div className="  pt-4 pb-1 text-white flex flex-wrap justify-around bg-red-500">
             
             <div className="text-center w-fit">

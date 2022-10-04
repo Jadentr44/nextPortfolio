@@ -13,7 +13,7 @@ export default function Bar({name,color}) {
   },[]);
   return (
     <div className='ml-2'>
-        <p className='text-center'>{name}</p>
+        <p className='text-center text-[#657899]'>{name}</p>
         <div onMount className=' relative border-2 w-[4.3rem] md:w-[6rem] xl:w-[7rem] border-black h-5 rounded-full'>
         <motion.div
         transition={{ ease: "easeOut", duration: .8 }}

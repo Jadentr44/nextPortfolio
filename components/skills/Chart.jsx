@@ -4,11 +4,11 @@ import { PieChart } from "react-minimal-pie-chart";
 export default function Chart({ setSkills, size, width }) {
   const [selected, setSelected] = useState(undefined);
   const [clicked, setClicked] = useState(undefined);
-  const segmentsStyle = { cursor: "pointer" };
+  const segmentsStyle = { cursor: "pointer",stroke:"#657899" };
   const pieData = [
-    { title: "Other", value: 9, color: "lightgray", real: "red" },
-    { title: "BackEnd", value: 20, color: "lightgray", real: "green" },
-    { title: "FrontEnd", value: 25, color: "lightgray", real: "lightblue" },
+    { title: "Other", value: 9, color: "lightgray", real: "#fde68a" },
+    { title: "BackEnd", value: 20, color: "lightgray", real: "#f87171" },
+    { title: "FrontEnd", value: 25, color: "lightgray", real: "#86efac" },
   ];
   return (
     <div className="w-[40vw] xl:w-[25vw] h-[40vw] xl:h-[25vw] ">
@@ -22,7 +22,7 @@ export default function Chart({ setSkills, size, width }) {
         // segmentsStyle={{ transition: 'stroke .3s', cursor: 'pointer' }}
         segmentsStyle={(index) => {
           return index === selected
-            ? { ...segmentsStyle, stroke: pieData[index].real }
+            ? { ...segmentsStyle, stroke: pieData[index].real,strokeOpacity:20 }
             : segmentsStyle;
         }}
         segmentsShift={(index) => (index === clicked ? 6 : 1)}

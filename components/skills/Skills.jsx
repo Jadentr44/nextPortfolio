@@ -29,23 +29,23 @@ export default function Skill() {
     return <div className=" h-[30vw] xl:h-0"></div>;
   }
   return (
-    <div className="">
+    <div className="min-h-screen">
 
-      <div className="w-1/4  text-6xl text-center mx-auto relative">
+<div className="w-fit h-fit    text-6xl text-center mx-auto relative">
         <motion.div
         transition={{left:{duration:.8}}}
-        animate={{width:showCart?"0%":"100%"}}
-        className="bg-white h-full absolute  right-0 top-0">
+        animate={{width:showCart?"0%":"102%"}}
+        className="bg-[#DFF1FF] h-[103%] absolute  right-[-1px] left-[-1px] bottom-[-1px] top-[-1px] ">
 
         </motion.div>
-        <div className="w-full bg-red-500 text-white py-2"><h2>skills</h2></div>
+        <div className="w-full lg:w-[25vw]  bg-red-500 text-white py-2 "><h2 className=''>Skills</h2></div>
         
       </div>
 
 
       
 
-      <div className="mx-[10%] flex flex-col xl:flex-row justify-around xl:justify-around min-h-screen items-center ">
+      <div className="mx-[10%] flex flex-col xl:flex-row justify-center xl:justify-around min-h-[70vh] lg:min-h-[95vh] items-center ">
         {/* 1 */}
         <div className="w-fit">
           {/* large screen */}

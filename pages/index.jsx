@@ -15,16 +15,19 @@ export default function Home() {
     });
   }
   return (
-    <div className="relative overflow-x-hidden  bg-white">
+    <div className="relative overflow-x-hidden  bg-[#DFF1FF]">
       <Nav />
       <section >
         <Splash scrollAbout={scrollAbout} />
       </section>
       
-    <section ref={aboutMe} className="mt-[5vh]">
+    <section ref={aboutMe} className="mt-[10vh]">
       <AboutMe />
     </section>
-      <section className="mt-[5vh]" ref={skillSection}>
+
+
+
+      <section className="mt-[15vh] lg:mt-[10vh]" ref={skillSection}>
       
     <Skill />
       </section>

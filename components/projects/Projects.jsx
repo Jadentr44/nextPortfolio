@@ -7,19 +7,19 @@ export default function Projects() {
   
   return (
     <div className='relative min-h-screen'>
-      <div className='absolute top-[75%]'>
+      <div className='absolute top-[75vh]'>
       <IsVisible once>
     {(isVisible) => <h1>{isVisible ? setSeen(true) : `I'm not visible!`}</h1>}
   </IsVisible>
       </div>
-<div className="w-1/4  text-6xl text-center mx-auto relative">
+      <div className="w-fit h-fit    text-6xl text-center mx-auto relative">
         <motion.div
         transition={{left:{duration:.8}}}
-        animate={{width:seen?"0%":"100%"}}
-        className="bg-white h-full absolute  right-0 top-0">
+        animate={{width:seen?"0%":"102%"}}
+        className="bg-[#DFF1FF] h-[103%] absolute  right-[-1px] left-[-1px] bottom-[-1px] top-[-1px] ">
 
         </motion.div>
-        <div className="w-full bg-red-500 text-white py-2 mb-12"><h2>Projects</h2></div>
+        <div className="w-full lg:w-[25vw]  bg-red-500 text-white py-2 "><h2 className=''>About me</h2></div>
         
       </div>
    
