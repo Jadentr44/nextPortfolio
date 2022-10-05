@@ -32,9 +32,10 @@ export default function Home() {
   return (
     <div className="relative overflow-x-hidden  bg-[#DFF1FF]">
       <Nav scrollAbout={scrollAbout} scrollSkills={scrollSkills} scrollProjects={scrollProjects}  />
+
       <section >
         <Splash scrollAbout={scrollAbout} />
-      </section>
+      </section> 
       
     <section ref={aboutMe} className="mt-[10vh]">
       <AboutMe />

@@ -17,6 +17,7 @@
     "react-is-visible": "^1.2.0",
     "react-minimal-pie-chart": "^8.3.0",
     "react-on-screen": "^2.1.1",
+    "react-text-transition": "^3.0.2",
     "typewriter-effect": "^2.19.0"
   },
   "devDependencies": {

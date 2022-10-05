@@ -53,59 +53,7 @@ export default function Nav({scrollAbout,scrollSkills,scrollProjects}) {
   }
   return (
     <>
-      {/* computer nav */}
-      <div
-        style={nav ? openNav : smClosedNav}
-        className={`fixed flex top-0 h-screen invisible xl:visible  `}
-        
-      >
-        <div onClick={()=>switchNav()} className="  cursor-pointer mt-12 xl:mt-4 mr-[-2px] z-20 px-3  py-2 h-fit w-fit rounded-l-full border-2 border-red-500 border-r-0 bg-red-500 ">
-        <motion.div className="h-fit w-fit"
-        transition={{rotate:{duration:.6}}}
-        animate={{rotate:iconRotate}}
-        >
-          {icon?<Hamburger   size={"4rem"} />:<Close size={"4rem"} />}
-        
-        </motion.div>
-        </div>
-        
-        <div className=" h-screen min-w-[20vw] border-l-4 border-red-500 bg-[#8DACE1] flex flex-col  ">
-          <div className="  pt-4 pb-1 text-white flex flex-wrap justify-around bg-red-500">
-            
-            <div className="text-center w-fit">
-              <Resume size={"4rem"} />
-              Resume
-            </div>
-            <div className="text-center w-fit">
-              <Github size={"4rem"} />
-              Github
-            </div>
-            <div className="text-center w-fit">
-              <Linkedin size={"4rem"} />
-              Linkedin
-            </div>
-            <div className="text-center w-fit">
-              <Linkedin size={"4rem"} />
-              Twitter
-            </div>
-          </div>
-         
-            <ul onClick={()=>switchNav()} className="flex flex-col justify-around  py-[5vh] items-center cursor-pointer text-black">
-              <li className=" border-t-2 border-gray-100 w-full text-center py-5  hover:bg-blue-200 text-5xl"><p className=" ">Home</p></li>
-              <li onClick={()=> scrollAbout()} className=" border-t-2 border-gray-100 w-full text-center py-5  hover:bg-blue-200 text-5xl"><p className=" ">About me</p></li>
-              <li onClick={()=> scrollSkills()} className=" border-t-2 border-gray-100 w-full text-center py-5  hover:bg-blue-200 text-5xl"><p className=" ">Skills</p></li>
-              <li onClick={()=> scrollProjects()} className=" border-t-2  border-gray-100 w-full text-center py-5  hover:bg-blue-200 text-5xl"><p className=" ">Projects</p></li>
-              <li className=" border-y-2 border-gray-100 w-full text-center py-5  hover:bg-blue-200 text-5xl"><p className=" ">Contact me</p></li>
-              
-              
-            </ul>
-          <div className="fixed bottom-0 w-[20vw] mb-4">
-            <p className="text-center mb-3">made with:</p>
-            <div className="flex justify-around"><FaReact size={"4rem"}/><Next size={"4rem"}/><Tailwind size={"4rem"}/></div>
-          </div>
-        </div>
-        
-      </div>
+
 
       {/* phone nav */}
       <div

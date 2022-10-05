@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
 import IsVisible from "react-is-visible";
 import Chart from "./Chart";
-import SkillChart from "./SkillChart";
+import BsArrowReturnLeft from "./icons/Arrow";
 import FEchart from "./FEchart";
 import FEkey from "./FEkey";
 import BEchart from "./BEchart";
@@ -16,8 +16,9 @@ export default function Skill() {
     if (skills === "BackEnd") return <BEchart />;
     if (skills === "Other") return <div className="w-[40vw]">Other</div>;
     return (
-      <div className="w-[40vw] h-[40vw] flex justify-center items-center">
-        Choose a Skill
+      <div className="w-[40vw] h-[40vw] flex flex-col justify-center items-center">
+        Click a Skill 
+        <BsArrowReturnLeft />
       </div>
     );
   }

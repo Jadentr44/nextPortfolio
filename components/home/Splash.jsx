@@ -1,78 +1,44 @@
-import React, { useState } from "react";
-import Typewriter from "typewriter-effect";
-import { Down } from "./icons";
-export default function Splash({ scrollAbout }) {
-  const [main, setMain] = useState(null);
-  const [seeArrow, setArrow] = useState(false);
-  const easeIn = { opacity: 1, transition: "opacity 500ms ease-in" };
-  const empty = { opacity: 0 };
+import React,{useState,useEffect} from 'react'
+import TextTransition, { presets } from "react-text-transition";
+export default function Splash() {
+  const words = ["Front-end ","Back-end ","Mobile "]
+  const [index,setIndex]= useState(0)
+  const [hovered,setHover]= useState(false)
+
+  useEffect(() => {
+    const intervalId = setInterval(() =>
+      setIndex(index => index + 1),
+      2500 // every 3 seconds
+    );
+    return () => clearTimeout(intervalId);
+  }, []);
   return (
-    <div
-      style={{ backgroundSize: "100% 100%" }}
-      className="relative flex justify-center items-center  h-screen w-screen bg-opacity-10 bg-splash bg-no-repeat overflow-x-hidden"
-    >
-      <div className="text-white">
-        <h1 className="text-6xl text-center">
-          {main ? (
-            main
-          ) : (
-            <Typewriter
-              onInit={(typewriter) => {
-                typewriter
-                  .pause(500)
-                  .typeString("Jaden Rodriguez")
-                  .callFunction(() => {
-                    setMain("Jaden Rodriguez");
-                  })
-                  .start();
-              }}
-            />
-          )}
-        </h1>
+    <div class="grid grid-cols-3  h-screen">
+  <div className='lg:col-span-2 col-span-3 flex justify-center items-center px-[25%]'>
+    <div>
+    <h1 className='text-7xl'>
+      Jaden Rodriguez
+    </h1>
+    <h2 className='flex text-3xl mt-2 mb-[15%]'>
+    <TextTransition  direction={"down"} springConfig={presets.wobbly}>
+        {words[index % words.length]} 
+      </TextTransition>
+      <span className='ml-2'>
 
-        <div className="w-full text-center mt-4 text-lg">
-          {!main ? (
-            <div className=" invisible">filler</div>
-          ) : (
-            <Typewriter
-              options={{ skipAddStyles: false }}
-              onInit={(typewriter) => {
-                typewriter
-                  .pause(800)
-                  .typeString("A full-stack developer")
-                  .pauseFor(1000)
-                  .changeDeleteSpeed(5)
-                  .deleteChars(20)
-                  .typeString("mobile developer")
-                  .pauseFor(1000)
-                  .deleteChars(16)
-                  .typeString("new colleague???")
-                  .pauseFor(1000)
-                  .changeDeleteSpeed(7)
-                  .deleteAll()
-                  .typeString("come find out")
-                  .callFunction(() => {
-                    setTimeout(() => {
-                      setArrow(true);
-                    }, 500);
-                  })
-                  .start();
-              }}
-            />
-          )}
-        </div>
-      </div>
-
-      <div
-        onClick={() => scrollAbout()}
-        style={seeArrow ? easeIn : empty}
-        className="absolute animate-bounce  bottom-[3rem]"
-      >
-        
-
-        <Down color={"#ef4444"} size={"5rem"} />
-        
-      </div>
+      Developer
+      </span>
+    </h2>
+    <p className='mb-[10%] text-xl'>
+    I am a web developer ready to do work in front-end and back-end, designing mobile first, responsive applications.
+    </p>
+    <button onMouseOver={()=>setHover(true)} onMouseOut={()=>setHover(false)} className={`${
+            hovered && "animate-wiggle"
+          } bg-red-500 py-2 px-3 rounded-full text-white shadow-lg`}>Learn More</button>
     </div>
-  );
+    
+  </div>
+
+  <div style={{boxShadow:"inset 0 0 15px  black"}} className='bg-red-500 h-full shadow-blue-600 hidden lg:block'></div>
+</div>
+  )
 }
