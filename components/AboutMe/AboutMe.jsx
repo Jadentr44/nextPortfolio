@@ -25,23 +25,23 @@ export default function AboutMe() {
 
 <div></div>
 
-<div className="w-fit h-fit    text-6xl text-center mx-auto relative">
+<div className="w-fit h-fit text-6xl p-5 pb-10 border-black text-center mx-auto relative">
         <motion.div
         transition={{left:{duration:.8}}}
-        animate={{width:seen?"0%":"102%"}}
-        className="bg-[#DFF1FF] h-[103%] absolute  right-[-1px] left-[-1px] bottom-[-1px] top-[-1px] ">
+        animate={{width:seen?"0%":"110%"}}
+        className="bg-[#DFF1FF] h-[105%] absolute  right-0  bottom-0 top-0 ">
 
         </motion.div>
-        <div className="w-full lg:w-[25vw]  bg-red-500 text-white py-2 "><h2 className=''>About me</h2></div>
+        <div className="w-full lg:w-[25vw] shadow-xl rounded-xl shadow-red-600       bg-red-500 text-white py-2 "><h2 className=''>About me</h2></div>
         
       </div>
 
       <div  className='mx-[10%] h-[85vh]  grid grid-cols-3 gap-2'>
 
-        <div className='flex flex-col justify-center items-center col-span-3 lg:col-span-1'>
-          <div className='h-fit w-1/2 lg:w-full border-4 rounded-b-full bg-red-500'>
+        <div className='flex flex-col  justify-center items-center col-span-3 lg:col-span-1'>
+          <div className='h-fit shadow-2xl shadow-red-600  w-1/2 lg:w-full  rounded-b-full bg-red-500'>
          <h2 className='text-center text-white text-xl lg:text-3xl pt-3'>Jaden Rodriguez</h2>
-         <div style={{backgroundSize:"100% 100%"}}  className={`bg-[url('/me.png')] h-[20vh] lg:h-[40vh] w-full rounded-b-full`}></div>
+         <div style={{backgroundSize:"100% 100%"}}  className={`bg-[url('/me.png')] h-[20vh] lg:h-[45vh] w-full rounded-b-full`}></div>
           </div>
         </div>
         

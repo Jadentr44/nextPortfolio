@@ -4,11 +4,13 @@ import { Next } from "../skills/icons/backend";
 import Tailwind from "../skills/icons/frontend/TailWind";
 import { FaReact } from "../skills/icons/frontend";
 import { motion } from "framer-motion";
-export default function Nav() {
+
+export default function Nav({scrollAbout,scrollSkills,scrollProjects}) {
   const [nav, setNav] = useState(false);
   const openNav = { right: 0, transition: "right 600ms ease-in", zIndex: 10 };
   const [iconRotate, setRotate] = useState("0deg")
   const [icon, setIcon] = useState(true);
+  const [opening, setOpening] = useState(false);
   const smClosedNav = {
     right: "-20vw",
     transition: "right 600ms ease-in",
@@ -21,20 +23,27 @@ export default function Nav() {
   };
   const [openBoolean,setBoolean] = useState(true)
   function switchNav(){
+    if(opening) return
+
     if(openBoolean){
+      setOpening(true)
       setBoolean(false)
       setNav(true);
       setRotate("360deg")
       setTimeout(() => {
+      setOpening(false)
+
         setIcon(false)
       }, 490)
       console.log("true, opening");
     }else{
+      setOpening(true)
       setBoolean(true)
       setNav(false);
       setRotate("0deg")
       setTimeout(() => {
-        setIcon(true)
+      setOpening(false)
+      setIcon(true)
       }, 490)
       console.log("false, closed");
 
@@ -82,11 +91,11 @@ export default function Nav() {
           </div>
          
             <ul onClick={()=>switchNav()} className="flex flex-col justify-around  py-[5vh] items-center cursor-pointer text-black">
-              <li className=" border-t-2 border-gray-100 w-full text-center py-5  hover:bg-gray-100 text-5xl"><p className=" ">Home</p></li>
-              <li className=" border-t-2 border-gray-100 w-full text-center py-5  hover:bg-gray-100 text-5xl"><p className=" ">About me</p></li>
-              <li className=" border-t-2 border-gray-100 w-full text-center py-5  hover:bg-gray-100 text-5xl"><p className=" ">Skills</p></li>
-              <li className=" border-t-2  border-gray-100 w-full text-center py-5  hover:bg-gray-100 text-5xl"><p className=" ">Projects</p></li>
-              <li className=" border-y-2 border-gray-100 w-full text-center py-5  hover:bg-gray-100 text-5xl"><p className=" ">Contact me</p></li>
+              <li className=" border-t-2 border-gray-100 w-full text-center py-5  hover:bg-blue-200 text-5xl"><p className=" ">Home</p></li>
+              <li onClick={()=> scrollAbout()} className=" border-t-2 border-gray-100 w-full text-center py-5  hover:bg-blue-200 text-5xl"><p className=" ">About me</p></li>
+              <li onClick={()=> scrollSkills()} className=" border-t-2 border-gray-100 w-full text-center py-5  hover:bg-blue-200 text-5xl"><p className=" ">Skills</p></li>
+              <li onClick={()=> scrollProjects()} className=" border-t-2  border-gray-100 w-full text-center py-5  hover:bg-blue-200 text-5xl"><p className=" ">Projects</p></li>
+              <li className=" border-y-2 border-gray-100 w-full text-center py-5  hover:bg-blue-200 text-5xl"><p className=" ">Contact me</p></li>
               
               
             </ul>
@@ -112,7 +121,7 @@ export default function Nav() {
         
         </motion.div>
         </div>
-        <div className="bg-white h-screen min-w-[60vw] border-l-2 border-black z-0 ">
+        <div className="bg-[#8DACE1] h-screen min-w-[60vw]  border-l-2 border-black z-0 ">
           <div className="mx-[10%] mt-4 flex flex-wrap justify-between text-black">
             <div className="text-center w-fit">
               <Resume size={"11vw"} />
@@ -132,11 +141,11 @@ export default function Nav() {
             </div>
           </div>
           <ul onClick={()=>switchNav()} className="flex flex-col justify-around text-black mt-[3vh] items-center cursor-pointer ">
-              <li className=" border-t-2 border-gray-100 w-full text-center py-5  hover:bg-gray-100 text-3xl"><p className=" ">Home</p></li>
-              <li className=" border-t-2 border-gray-100 w-full text-center py-5  hover:bg-gray-100 text-3xl"><p className=" ">About me</p></li>
-              <li className=" border-t-2 border-gray-100 w-full text-center py-5  hover:bg-gray-100 text-3xl"><p className=" ">Skills</p></li>
-              <li className=" border-y-[1px] border-opacity-50 border-gray-100 w-full text-center py-5  hover:bg-gray-100 text-3xl"><p className=" ">Projects</p></li>
-              <li className=" border-y-[1px] border-opacity-50 border-gray-100 w-full text-center py-5  hover:bg-gray-100 text-3xl"><p className=" ">Contact me</p></li>
+              <li className=" border-t-2 border-gray-100 w-full text-center py-5  hover:bg-blue-200 text-3xl"><p className=" ">Home</p></li>
+              <li onClick={()=> scrollAbout()} className=" border-t-2 border-gray-100 w-full text-center py-5  hover:bg-blue-200 text-3xl"><p className=" ">About me</p></li>
+              <li onClick={()=> scrollSkills()} className=" border-t-2 border-gray-100 w-full text-center py-5  hover:bg-blue-200 text-3xl"><p className=" ">Skills</p></li>
+              <li onClick={()=> scrollProjects()} className=" border-t-2  border-gray-100 w-full text-center py-5  hover:bg-blue-200 text-3xl"><p className=" ">Projects</p></li>
+              <li className=" border-y-2  border-gray-100 w-full text-center py-5  hover:bg-blue-200 text-3xl"><p className=" ">Contact me</p></li>
               
               
             </ul>

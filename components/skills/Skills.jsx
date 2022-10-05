@@ -29,16 +29,20 @@ export default function Skill() {
     return <div className=" h-[30vw] xl:h-0"></div>;
   }
   return (
-    <div className="min-h-screen">
-
-<div className="w-fit h-fit    text-6xl text-center mx-auto relative">
+    <div className="min-h-screen relative">
+ <div className='absolute top-[75vh]'>
+      <IsVisible once>
+    {(isVisible) => <h1>{isVisible ? setChart(true) : `I'm not visible!`}</h1>}
+  </IsVisible>
+      </div>
+<div className="w-fit h-fit text-6xl p-5 pb-10 border-black text-center mx-auto relative">
         <motion.div
         transition={{left:{duration:.8}}}
-        animate={{width:showCart?"0%":"102%"}}
-        className="bg-[#DFF1FF] h-[103%] absolute  right-[-1px] left-[-1px] bottom-[-1px] top-[-1px] ">
+        animate={{width:showCart?"0%":"110%"}}
+        className="bg-[#DFF1FF] h-[105%] absolute  right-0  bottom-0 top-0 ">
 
         </motion.div>
-        <div className="w-full lg:w-[25vw]  bg-red-500 text-white py-2 "><h2 className=''>Skills</h2></div>
+        <div className="w-full lg:w-[25vw] shadow-xl rounded-xl shadow-red-600       bg-red-500 text-white py-2 "><h2 className=''>Skills</h2></div>
         
       </div>
 
@@ -51,20 +55,24 @@ export default function Skill() {
           {/* large screen */}
           <div className="hidden xl:block">
             {!showCart
-            ?<div className="w-[25vw] h-[30vw]"></div>
+            ?<div className="w-[25vw] "></div>
           :
             <Chart width={25} setSkills={setSkills} />}
           </div>
 
           {/* small screen */}
-          <div className="flex justify-around w-full  xl:hidden">
-            <Chart width={40} setSkills={setSkills} />
+          <div className="xl:hidden">
+          {!showCart
+            ?<div className="w-[25vw] "></div>
+          :
+            <div className="flex justify-around w-full  "> 
+              <Chart width={40} setSkills={setSkills} />
             {renderSkillsPie(40)}
+            </div>
+            }
           </div>
 
-          <IsVisible once>
-            {(isVisible) => <h1>{isVisible ? setChart(true) : ``}</h1>}
-          </IsVisible>
+          
         </div>
 
         {/* 2 */}

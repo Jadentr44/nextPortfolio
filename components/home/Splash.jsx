@@ -48,7 +48,7 @@ export default function Splash({ scrollAbout }) {
                   .deleteChars(16)
                   .typeString("new colleague???")
                   .pauseFor(1000)
-                  .changeDeleteSpeed(12)
+                  .changeDeleteSpeed(7)
                   .deleteAll()
                   .typeString("come find out")
                   .callFunction(() => {

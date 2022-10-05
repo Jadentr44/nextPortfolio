@@ -12,14 +12,14 @@ export default function Projects() {
     {(isVisible) => <h1>{isVisible ? setSeen(true) : `I'm not visible!`}</h1>}
   </IsVisible>
       </div>
-      <div className="w-fit h-fit    text-6xl text-center mx-auto relative">
+      <div className="w-fit h-fit text-6xl p-5 pb-10 border-black text-center mx-auto relative">
         <motion.div
         transition={{left:{duration:.8}}}
-        animate={{width:seen?"0%":"102%"}}
-        className="bg-[#DFF1FF] h-[103%] absolute  right-[-1px] left-[-1px] bottom-[-1px] top-[-1px] ">
+        animate={{width:seen?"0%":"110%"}}
+        className="bg-[#DFF1FF] h-[105%] absolute  right-0  bottom-0 top-0 ">
 
         </motion.div>
-        <div className="w-full lg:w-[25vw] mb-12  bg-red-500 text-white py-2 "><h2 className=''>Projects</h2></div>
+        <div className="w-full lg:w-[25vw] shadow-xl rounded-xl shadow-red-600       bg-red-500 text-white py-2 "><h2 className=''>Projects</h2></div>
         
       </div>
    
