@@ -22,7 +22,7 @@ export default function AboutMe() {
   <div className='lg:col-span-2 col-span-3   px-[10%] relative '>
     <div className='mt-10  w-fit mx-auto flex items-center'>
       <div className=''>
-      <h2 className='text-2xl'>Hi I'm</h2>
+      <h2 className='text-2xl'>Hi I&rsquo;m</h2>
       <h2 className='text-7xl '>Jaden Rodriguez </h2>
       <h2 className=' text-2xl flex justify-end  mt-3'>a web developer</h2>
 
