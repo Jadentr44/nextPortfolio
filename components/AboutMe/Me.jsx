@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Me() {
   return (
-    <svg className='absolute bottom-0 right-0' width="542" height="565" viewBox="0 0 542 565" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg className='w-full' width="542" height="565" viewBox="0 0 542 565" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path opacity="0.64" d="M306.1 564.609C435.942 564.609 541.2 543.432 541.2 517.309C541.2 491.186 435.942 470.009 306.1 470.009C176.258 470.009 71 491.186 71 517.309C71 543.432 176.258 564.609 306.1 564.609Z" fill="#68CCE9"/>
 <path opacity="0.64" d="M55 562C85.3757 562 110 550.136 110 535.5C110 520.864 85.3757 509 55 509C24.6243 509 0 520.864 0 535.5C0 550.136 24.6243 562 55 562Z" fill="#68CCE9"/>
 <path d="M193.4 509.709C196.7 499.009 206.8 493.309 223.2 488.509C233.6 485.509 246.8 484.109 267.5 479.909C277.6 477.909 284.7 473.909 284.7 473.909V485.409C284.7 485.409 216.2 498.909 205.5 516.609C200.3 525.309 201.9 546.609 226.4 548.809C218.9 549.909 206.6 548.009 200 541.309C191.8 533.009 189.6 521.909 193.4 509.709Z" fill="#282323" stroke="black" stroke-width="4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
