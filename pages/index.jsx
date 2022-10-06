@@ -37,7 +37,7 @@ export default function Home() {
         <Splash scrollAbout={scrollAbout} />
       </section> 
       
-    <section ref={aboutMe} className="mt-[10vh]">
+    <section ref={aboutMe} className="">
       <AboutMe />
     </section>
 
