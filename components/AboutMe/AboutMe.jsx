@@ -36,7 +36,7 @@ export default function AboutMe({scrollSkills}) {
     </div>
     <div>
 
-    <p className='text-xl mt-8   leading-8'>I am interested in all kinds of code. I was big into video games when I was younger, which lead me to having an interest in computers. I was first introduced to coding, when I joined my high schools robotics team. Since then I've played with robot programming, game development, autimization, and now settling with web development.</p>
+    <p className='text-xl mt-8   leading-8'>I am interested in all kinds of code. I was big into video games when I was younger, which lead me to having an interest in computers. I was first introduced to coding, when I joined my high schools robotics team. Since then I&rsquo;ve played with robot programming, game development, autimization, and now settling with web development.</p>
     <div className='grid grid-cols-2 mt-16'>
       <div className=''>
       <p className='text-xl    leading-8'>
