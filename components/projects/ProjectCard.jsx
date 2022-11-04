@@ -15,7 +15,7 @@ export default function ProjectCard({ tech, name,desc,path}) {
   return (
     <div
       style={{ zIndex: 1 }}
-      className="bg-[#8DACE1] border-4 border-black rounded-lg flex relative w-[70vw] lg:w-[36vw]  min-h-[25vh] h-fit lg:min-h-[18vw] lg:h-full   text-white mb-12 "
+      className="bg-[#8DACE1] border-4 border-black rounded-lg flex relative w-[70vw] lg:w-[25vw]  min-h-[25vh] h-[25vh] lg:min-h-[18vw] lg:h-[15vw]   text-white mb-12 "
     >
       <motion.div
         animate={{ width: imgW }}
@@ -45,7 +45,7 @@ export default function ProjectCard({ tech, name,desc,path}) {
         <div className="h-full w-1 bg-red-500"></div>
       </motion.div>
       <div className="w-full min-h-full px-[15%] bg-[#8DACE1] ">
-        <h1 className="text-center text-md lg:text-xl max-w-[80%]  mx-auto">{name}</h1>
+        <h1 className="text-center text-md lg:text-4xl max-w-[80%]  mx-auto">{name}</h1>
         <h2 className="text-center text-sm lg:text-lg my-2 lg:my-3 font-bold">
         {tech.map((e,i)=>{
           return i==0?`| ${e} |`:` ${e} |`

@@ -13,13 +13,13 @@ export default function Splash({scrollAbout}) {
     return () => clearTimeout(intervalId);
   }, []);
   return (
-    <div class="grid grid-cols-3  h-screen">
-  <div className='lg:col-span-2 col-span-3 flex justify-center items-center px-[25%]'>
+    <div class="mr-[15vw]  h-screen">
+  <div className=' flex justify-center items-center px-[15%] h-full'>
     <div>
-    <h1 className='text-7xl'>
+    <h1 className='text-8xl'>
       Jaden Rodriguez
     </h1>
-    <h2 className='flex text-3xl mt-2 mb-[15%]'>
+    <h2 className='flex text-5xl mt-2 mb-[10%]'>
       <div>
 
     <TextTransition  direction={"down"} springConfig={presets.wobbly}>
@@ -31,7 +31,7 @@ export default function Splash({scrollAbout}) {
       Developer
       </span>
     </h2>
-    <p className='mb-[10%] text-xl'>
+    <p className='mb-[5%] text-xl mr-[25%]'>
     I am a web developer ready to do work in front-end and back-end, designing mobile first, responsive applications.
     </p>
     <button onMouseOver={()=>setHover(true)} onMouseOut={()=>setHover(false)} onClick={()=> scrollAbout()} className={`${
@@ -41,9 +41,7 @@ export default function Splash({scrollAbout}) {
     
   </div>
 
-  <div  style={{boxShadow:"inset 0 0 15px  black",zIndex:100}} className='bg-red-500 h-full shadow-blue-600 hidden lg:block relative '>
-    
-    </div>
+  
     
 </div>
   )

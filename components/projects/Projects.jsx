@@ -6,39 +6,23 @@ export default function Projects() {
   const [seen,setSeen] =useState(false)
   
   return (
-    <div className='relative min-h-screen'>
-      <div className='absolute top-[75vh]'>
-      <IsVisible once>
-    {(isVisible) => <h1>{isVisible ? setSeen(true) : `I'm not visible!`}</h1>}
-  </IsVisible>
-      </div>
-      <div className="w-fit h-fit text-6xl p-5 pb-10 border-black text-center mx-auto relative">
-        <motion.div
-        transition={{left:{duration:.8}}}
-        animate={{width:seen?"0%":"110%"}}
-        className="bg-[#DFF1FF] h-[105%] absolute  right-0  bottom-0 top-0 ">
+    <div className=' min-h-screen '>
+      
+      <div className=' mr-[15%]'>
+        <h2 className='text-center text-7xl'>Projects</h2>
+        <div className='flex justify-around mt-8 flex-wrap mx-[8%]'>
 
-        </motion.div>
-        <div className="w-full lg:w-[25vw] shadow-xl rounded-xl shadow-red-600       bg-red-500 text-white py-2 "><h2 className=''>Projects</h2></div>
         
-      </div>
-   
-    <div className='flex justify-around lg:justify-between flex-wrap  mx-[10%] relative h-fit '>
-      {/* <side style={{zIndex:3}} className="w-full bg-white">a</side> */}
+      <ProjectCard tech={["Next js","Next Auth","MongoDB","Tailwind","React"]} name={"MyAniRank"} desc={"a website that allows you to view popular anime, then rank rank your favorite, that can be saved to your account"} path={"/MyAniRank.png"}  />
+
+      <ProjectCard tech={["Handlebars","Jquery","Express","MySQL","bootstrap"]} name={"House Ruled"} desc={"a one stop DND one shot builder. This website includes a monster maker, encounter balancer, and story layout for your next DND session "} path={"/houseRuled.png"}  />
+
       <ProjectCard tech={["Handlebars","Jquery","Express","MySQL","bootstrap"]} name={"Battle of the Shadow Tomb"} desc={"a game  that allows you and another Player to play online in a back and forth pvp game, you each have the ability to customize your characters fighting ability. "} path={"/botst.jpg"}  />
 
-       <ProjectCard tech={["React","Next.js","Next-Auth","tailwind"]} name={"MyAniRank"} desc={"an app that allows you to log in and browse anime, that you can then rank. Your list will be saved to your account, that you can then share with your friends."} path={"/botst.jpg"}  />
-
-      <ProjectCard tech={["React","Next.js","Next-Auth","tailwind"]} name={"MyAniRank"} desc={"an app that allows you to log in and browse anime, that you can then rank. Your list will be saved to your account, that you can then share with your friends."} path={"/DotM.jpg"}  />
-      
-      <ProjectCard tech={["HTML","weather API","bulma","local storage"]} name={"Dart on the map"} desc={"an app that allows you to log in and browse anime, that you can then rank. Your list will be saved to your account, that you can then share with your friends."} path={"/DotM.jpg"}  /> 
-      
-
-      
-      
-    
-      
-    </div>
+      <ProjectCard tech={["Html","Jquery","css","Bulma","Weather api","Express"]} name={"Dart on The Map"} desc={"a website that allows you to get local data, currency exchange rate, and weather on a location you may plan to visit"} path={"/DotM.jpg"}  />
+      </div>
+      </div>
+     
     </div>
   )
 }

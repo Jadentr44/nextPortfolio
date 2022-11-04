@@ -4,6 +4,10 @@ import { Next } from "../skills/icons/backend";
 import Tailwind from "../skills/icons/frontend/TailWind";
 import { FaReact } from "../skills/icons/frontend";
 import { motion } from "framer-motion";
+import Home from './icons/Home'
+import Person from "./icons/Person";
+import Skills from "./icons/Skills";
+import Projects from "./icons/Projects";
 
 export default function Nav({scrollAbout,scrollSkills,scrollProjects}) {
   const [nav, setNav] = useState(false);
@@ -11,6 +15,7 @@ export default function Nav({scrollAbout,scrollSkills,scrollProjects}) {
   const [iconRotate, setRotate] = useState("0deg")
   const [icon, setIcon] = useState(true);
   const [opening, setOpening] = useState(false);
+  const [page,setPage] = useState(0)
   const smClosedNav = {
     right: "-20vw",
     transition: "right 600ms ease-in",
@@ -53,8 +58,26 @@ export default function Nav({scrollAbout,scrollSkills,scrollProjects}) {
   }
   return (
     <>
+    {/* computer nav */}
+    <div style={{
+          boxShadow: "inset 0 0 15px  black",
+        }} className="xl:visible sm:invisible fixed right-0 w-[15vw] bg-red-500 h-screen">
+    <ul className="flex flex-col items-center justify-center h-full text-white">
+      <li className="my-3" onClick={()=>{setPage(0)}} ><motion.div className="mx-auto" animate={{width:page==0?"6rem":"3rem"}}><Home  /></motion.div><p className="text-center text-4xl">{page==0?"Home":""}</p></li>
+
+      <li className="my-3" onClick={()=>{setPage(1)}} ><motion.div className="mx-auto" animate={{width:page==1?"6rem":"3rem"}}><Person /></motion.div><p className="text-center text-4xl">{page==1?"About Me":""}</p></li>
+      <li className="my-3" onClick={()=>{setPage(2)}} ><motion.div className="mx-auto" animate={{width:page==2?"6rem":"3rem"}}><Skills  /></motion.div><p className="text-center text-4xl">{page==2?"Skills":""}</p></li>
+      <li className="my-3" onClick={()=>{setPage(3)}} ><motion.div className="mx-auto" animate={{width:page==3?"6rem":"3rem"}}><Projects/></motion.div><p className="text-center text-4xl">{page==3?"Projects":""}</p></li>
 
 
+      
+
+
+      
+      
+      
+    </ul>
+    </div>
       {/* phone nav */}
       <div
         style={nav ? openNav : mdClosedNav}
