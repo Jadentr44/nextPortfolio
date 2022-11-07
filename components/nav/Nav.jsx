@@ -10,13 +10,12 @@ import Skills from "./icons/Skills";
 import Projects from "./icons/Projects";
 import Email from "./icons/Email";
 
-export default function Nav({ scrollAbout, scrollSkills, scrollProjects,scrollContact }) {
+export default function Nav({ scrollAbout, scrollSkills, scrollProjects,scrollContact,page,setPage }) {
   const [nav, setNav] = useState(false);
   const openNav = { right: 0, transition: "right 600ms ease-in", zIndex: 10 };
   const [iconRotate, setRotate] = useState("0deg");
   const [icon, setIcon] = useState(true);
   const [opening, setOpening] = useState(false);
-  const [page, setPage] = useState(0);
   const smClosedNav = {
     right: "-20vw",
     transition: "right 600ms ease-in",
@@ -62,7 +61,7 @@ export default function Nav({ scrollAbout, scrollSkills, scrollProjects,scrollCo
           boxShadow: "inset 0 0 15px  black",
           zIndex: 0,
         }}
-        className="xl:visible sm:invisible top-0 fixed right-0 w-[15vw] bg-red-500 h-screen"
+        className=" z-10 xl:visible sm:invisible top-0 fixed right-0 w-[15vw] bg-red-500 h-screen"
       >
         <ul className="flex flex-col items-center justify-center h-full text-white">
           <li

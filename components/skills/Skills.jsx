@@ -17,7 +17,7 @@ export default function Skill() {
     if (skills === "Other") return <div className="w-[25vw]">Other</div>;
     return (
       <div className=" h-[25vw] w-[25vw] flex flex-col justify-center items-center">
-        Click a Skill 
+        Click a Skill
         <BsArrowReturnLeft />
       </div>
     );
@@ -31,17 +31,15 @@ export default function Skill() {
   }
 
   return (
-    <div className="grid h-screen  relative mr-[15%] ">
+    <div className="grid h-screen  relative  ">
       <div className=" px-[10%]">
-    <h2 className="text-center text-7xl mt-14">Skills</h2>
-    <div className="flex justify-around mt-12">
-
-    <Chart setSkills={setSkills} />
-    {renderSkillsPie()}
-    </div>
-    {renderSkillsKey()}
+        <h2 className="text-center text-7xl mt-14">Skills</h2>
+        <div className="flex justify-around mt-12">
+          <Chart setSkills={setSkills} />
+          {renderSkillsPie()}
+        </div>
+        {renderSkillsKey()}
       </div>
-      
     </div>
   );
 }

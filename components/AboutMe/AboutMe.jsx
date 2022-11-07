@@ -22,7 +22,7 @@ export default function AboutMe({ scrollSkills }) {
   };
 
   return (
-    <div className="h-screen  mr-[15vw]">
+    <div className="h-screen ">
       <div className="  mx-[10%] flex flex-col lg:justify-around">
         <header className="mt-20 lg:mt-5 w-full flex justify-center items-center ">
           <div className="  w-fit">
