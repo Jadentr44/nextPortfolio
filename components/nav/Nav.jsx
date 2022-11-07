@@ -166,7 +166,7 @@ export default function Nav({
           <Projects />
         </div>
         {console.log("if you are seeing this you must REALLY like this...or something broke")}
-     {console.log('https://www.youtube.com/watch?v=a3Z7zEc7AXQ')}
+     {console.log('https://www.youtube.com/watch?v=jz5a-KYJY3M')}
      {console.log("since you are here you might as well check out this video")}
         <div
           onClick={() => {
