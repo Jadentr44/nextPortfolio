@@ -11,7 +11,7 @@ export default function ProjectCard({ tech, name, desc, path,git,dep }) {
   const [arrowDeg, setArrow] = useState("0deg");
   const [showLinks, setShow] = useState(false);
   const url = `url('${path}')`;
-  console.log(url);
+
   return (
     <div
       style={{ zIndex: 1 }}

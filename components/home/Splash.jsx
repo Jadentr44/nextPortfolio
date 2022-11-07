@@ -13,7 +13,7 @@ export default function Splash({ scrollAbout }) {
     return () => clearTimeout(intervalId);
   }, []);
   return (
-    <div class=" h-screen">
+    <div className=" h-screen">
       <div className=" flex justify-center items-center px-[15%] h-full">
         <div>
           <h1 className="lg:text-8xl text-5xl">Jaden Rodriguez</h1>

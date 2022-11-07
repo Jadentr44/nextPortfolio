@@ -5,6 +5,7 @@ import { Git, Insomnia, Linux,VScode,Github } from './icons/other';
 import Bar from "./Bar";
 export default function Otherkey({size}) {
   return (
+    
     <div className="flex flex-wrap justify-between lg:justify-around  w-full lg:w-[40vw] max-h-[30vw] text-black mx-auto">
       <div className="flex  mx-3 my-2">
         <Git size={size} />
