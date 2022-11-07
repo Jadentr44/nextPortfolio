@@ -36,7 +36,7 @@ export default function Contact() {
               <h3 className="mb-4">Jadentr44</h3>
               <a
                 className="border-2  rounded-full py-1 px-2 bg-white text-red-500 hover:bg-slate-200 "
-                target="_blank"
+                target="_blank" rel="noreferrer"
                 href="https://github.com/Jadentr44"
               >
                 view my Github
@@ -52,7 +52,7 @@ export default function Contact() {
               <h3 className="mb-4">Jaden Rodriguez</h3>
               <a
                 target="_blank"
-                className="border-2  rounded-full py-1 px-2 bg-white text-red-500 hover:bg-slate-200 "
+                className="border-2  rounded-full py-1 px-2 bg-white text-red-500 hover:bg-slate-200 " rel="noreferrer"
                 href="https://www.linkedin.com/in/jaden-rodriguez-59a000242/"
               >
                 view my Linkedin
@@ -64,7 +64,7 @@ export default function Contact() {
       <footer class="p-4  left-0 right-1 absolute bottom-0 bg-[#DFF1FF]   md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800">
         <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">
           © 2022{" "}
-          <a href="https://flowbite.com/" class="hover:underline">
+          <a href="https://flowbite.com/"  class="hover:underline">
             Jaden Rodriguez
           </a>
           . All Rights Reserved.
