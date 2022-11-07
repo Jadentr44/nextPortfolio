@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import Github from "./icons/Github";
 import RiComputerLine from "./icons/Website";
 
-export default function ProjectCard({ tech, name, desc, path }) {
+export default function ProjectCard({ tech, name, desc, path,git,dep }) {
   const [imgW, setW] = useState("99%");
   const [arrowDeg, setArrow] = useState("0deg");
   const [showLinks, setShow] = useState(false);
@@ -59,12 +59,18 @@ export default function ProjectCard({ tech, name, desc, path }) {
         className="lg:right-[3%] right-[5%] absolute bottom-0"
         style={{ zIndex: -1 }}
       >
+          <a href={dep} target="_blank" rel="noopener noreferrer">
         <div className="absolute bottom-12 border-black  rounded-r-full bg-red-500  pl-8 pr-4 border-2 cursor-pointer">
+
           <RiComputerLine />
         </div>
+          </a>
+          <a href={git} target="_blank" rel="noopener noreferrer">
         <div className="absolute bottom-2 border-black  rounded-r-full bg-red-500  pl-8 pr-4 border-2 cursor-pointer">
+
           <Github />
         </div>
+          </a>
       </motion.div>
     </div>
   );

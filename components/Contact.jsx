@@ -20,7 +20,7 @@ export default function Contact() {
               <div className="w-full">
                 <h3 className="text-center">Email:</h3>
                 <h3 className="mb-4">Rodriguez@jadent.dev</h3>
-                <a
+                <a target="_blank" rel="noopener noreferrer"
                   className="border-2  rounded-full py-1 px-2 bg-white text-red-500 hover:bg-slate-200 "
                   href="mailto: Rodriugez@jadent.dev"
                 >
@@ -37,7 +37,7 @@ export default function Contact() {
               <div className="w-full">
                 <h3 className="text-center">Github:</h3>
                 <h3 className="mb-4">Jadentr44</h3>
-                <a
+                <a target="_blank" 
                   className="border-2  rounded-full py-1 px-2 bg-white text-red-500 hover:bg-slate-200 "
                   href="https://github.com/Jadentr44"
                   rel="noreferrer"
@@ -55,7 +55,7 @@ export default function Contact() {
               <div className="w-full">
                 <h3 className="text-center">Linkedin:</h3>
                 <h3 className="mb-4">Jaden Rodriguez</h3>
-                <a
+                <a target="_blank" 
                   className="border-2  rounded-full py-1 px-2 bg-white text-red-500 hover:bg-slate-200 "
                   href="https://www.linkedin.com/in/jaden-rodriguez-59a000242/"
                   rel="noreferrer"
