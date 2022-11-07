@@ -50,7 +50,7 @@ export default function Home() {
         scrollSkills={scrollSkills}
         scrollProjects={scrollProjects}
       />
-      <div className=" overflow-x-hidden mr-[15%]  bg-[#DFF1FF]">
+      <div className=" overflow-x-hidden lg:mr-[15%]  bg-[#DFF1FF]">
         <section className="h-fit relative ">
         <TrackVisibility className="absolute top-[75vh]">
             {({ isVisible }) => (isVisible ? setPage(0) : "")}

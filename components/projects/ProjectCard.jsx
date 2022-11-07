@@ -38,7 +38,7 @@ export default function ProjectCard({ tech, name,desc,path}) {
             imgW == "99%" ? setArrow("180deg") : setArrow("0deg");
             !showLinks?setShow(true):setShow(false)
           }}
-          className="border-2 border-red-500 h-8 w-10 lg:h-14 lg:w-20 rounded-full p-2 bg-red-500 cursor-pointer  text-white"
+          className="border-2 border-red-500 h-12 w-14 lg:h-14 lg:w-20 rounded-full p-2 bg-red-500 cursor-pointer  text-white"
         >
           <Arrow />
         </motion.div>

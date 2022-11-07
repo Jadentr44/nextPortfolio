@@ -61,7 +61,7 @@ export default function Nav({ scrollAbout, scrollSkills, scrollProjects,scrollCo
           boxShadow: "inset 0 0 15px  black",
           zIndex: 0,
         }}
-        className=" z-10 xl:visible sm:invisible top-0 fixed right-0 w-[15vw] bg-red-500 h-screen"
+        className="  hidden lg:block top-0 fixed right-0 w-[15vw] bg-red-500 h-screen"
       >
         <ul className="flex flex-col items-center justify-center h-full text-white">
           <li
@@ -152,79 +152,8 @@ export default function Nav({ scrollAbout, scrollSkills, scrollProjects,scrollCo
         </ul>
       </div>
       {/* phone nav */}
-      <div
-        style={nav ? openNav : mdClosedNav}
-        className={`fixed flex top-0 bottom-0 xl:invisible sm:visible`}
-      >
-        <div
-          onClick={() => switchNav()}
-          className="  cursor-pointer mt-6 xl:mt-4 mr-[-2px] z-20 px-3  py-2 h-fit w-fit rounded-l-full border-2 border-red-500 border-r-0 bg-red-500 "
-        >
-          <motion.div
-            className="h-fit w-fit"
-            transition={{ rotate: { duration: 0.6 } }}
-            animate={{ rotate: iconRotate }}
-          >
-            {icon ? <Hamburger size={"4rem"} /> : <Close size={"4rem"} />}
-          </motion.div>
-        </div>
-        <div className="bg-[#8DACE1] h-screen min-w-[60vw]  border-l-2 border-black z-0 ">
-          <div className="mx-[10%] mt-4 flex flex-wrap justify-between text-black">
-            <div className="text-center w-fit">
-              <Resume size={"11vw"} />
-              Resume
-            </div>
-            <div className="text-center w-fit">
-              <Github size={"11vw"} />
-              Github
-            </div>
-            <div className="text-center w-fit">
-              <Linkedin size={"11vw"} />
-              Linkedin
-            </div>
-            <div className="text-center w-fit">
-              <Linkedin size={"11vw"} />
-              Linkedin
-            </div>
-          </div>
-          <ul
-            onClick={() => switchNav()}
-            className="flex flex-col justify-around text-black mt-[3vh] items-center cursor-pointer "
-          >
-            <li className=" border-t-2 border-gray-100 w-full text-center py-5  hover:bg-blue-200 text-3xl">
-              <p className=" ">Home</p>
-            </li>
-            <li
-              onClick={() => scrollAbout()}
-              className=" border-t-2 border-gray-100 w-full text-center py-5  hover:bg-blue-200 text-3xl"
-            >
-              <p className=" ">About me</p>
-            </li>
-            <li
-              onClick={() => scrollSkills()}
-              className=" border-t-2 border-gray-100 w-full text-center py-5  hover:bg-blue-200 text-3xl"
-            >
-              <p className=" ">Skills</p>
-            </li>
-            <li
-              onClick={() => scrollProjects()}
-              className=" border-t-2  border-gray-100 w-full text-center py-5  hover:bg-blue-200 text-3xl"
-            >
-              <p className=" ">Projects</p>
-            </li>
-            <li className=" border-y-2  border-gray-100 w-full text-center py-5  hover:bg-blue-200 text-3xl">
-              <p className=" ">Contact me</p>
-            </li>
-          </ul>
-          <div className="fixed bottom-0 w-[60vw]">
-            <p className="text-center mb-3">made with:</p>
-            <div className="flex justify-around">
-              <FaReact size={"4rem"} />
-              <Next size={"4rem"} />
-              <Tailwind size={"4rem"} />
-            </div>
-          </div>
-        </div>
+      <div style={{zIndex:100}} className="block lg:hidden fixed bottom-5 left-8 right-8 border-2 rounded-full p-2 bg-white">
+    Nav
       </div>
     </>
   );

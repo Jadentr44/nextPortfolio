@@ -23,8 +23,8 @@ export default function AboutMe({ scrollSkills }) {
 
   return (
     <div className="h-screen ">
-      <div className="  mx-[10%] flex flex-col lg:justify-around">
-        <header className="mt-20 lg:mt-5 w-full flex justify-center items-center ">
+      <div className="  lg:mx-[10%] flex flex-col lg:justify-around">
+        <header className="mt-5 w-full flex justify-center items-center ">
           <div className="  w-fit">
             <div className="text-lg lg:text-2xl">Hi im</div>
             <div className="text-2xl lg:text-6xl xl:text-7xl">
@@ -39,22 +39,22 @@ export default function AboutMe({ scrollSkills }) {
           </div>
         </header>
         <main className="flex">
-          <div className=" w-1/3 flex items-end">
+          <div className="hidden w-1/3 lg:flex items-end">
             <Me />
           </div>
-          <div className=" w-2/3 h-[70vh] mt-5  mx-[5%] relative">
+          <div className=" lg:w-2/3 h-[70vh] mt-5  lg:mx-[5%] relative">
           <button
                 onMouseOver={() => setHover(true)}
                 onMouseOut={() => setHover(false)}
                 onClick={() => scrollSkills()}
                 className={`${
                   hovered && "animate-wiggle"
-                } bg-red-500 py-2 px-3 mt-12 rounded-full text-white shadow-lg w-fit absolute bottom-0 left-0`}
+                } bg-red-500 py-2 px-3 mt-12 rounded-full text-white shadow-lg w-fit absolute bottom-6 lg:bottom-0 lg:left-0 right-5`}
               >
                 See My Skills
               </button>
-              <div className="flex justify-around mt-10">
-                <div className="w-[10vw] h-[10vw] rounded-xl  bg-red-500 text-center text-white">
+              <div className="flex justify-around mt-4 lg:mt-10">
+                <div className="lg:w-[10vw] w-[30vw] lg:h-[10vw]  rounded-xl  bg-red-500 text-center text-white">
                   <p className="text-xl">hobbies:</p>
                   <ol className="flex flex-col items-center ">
                   <li className="flex items-center my-[3%]">
@@ -71,7 +71,7 @@ export default function AboutMe({ scrollSkills }) {
                   </li>
                   </ol>
                 </div>
-                <div className="w-[10vw] h-[10vw] rounded-xl  bg-red-500 text-center text-white">
+                <div className="lg:w-[10vw] w-[30vw] lg:h-[10vw] rounded-xl  bg-red-500 text-center text-white">
                   <p className="text-xl">Interests:</p>
                   <ol className="flex flex-col items-center ">
                   <li className="flex items-center my-[3%]">
@@ -88,9 +88,9 @@ export default function AboutMe({ scrollSkills }) {
                   </li>
                   </ol>
                 </div>
-                <div className="w-[10vw] h-[10vw] rounded-xl  bg-red-500"></div>
+                <div className="lg:w-[10vw] w-[30vw] lg:h-[10vw]  rounded-xl  bg-red-500"></div>
               </div>
-            <p className="text-xl mt-12 ">
+            <p className="lg:text-xl mt-4 lg:mt-12 mx-[5%] lg:mx-0">
             I am interested in all kinds of code. I was a huge video game
             enthusiast when i was younger which translated into my interested in
             computers. I was first introduced to coding when I joined the
@@ -98,7 +98,7 @@ export default function AboutMe({ scrollSkills }) {
             programming robotics, game development, automation, and now web
             development
             </p>
-            <p className="text-xl mt-5">
+            <p className="lg:text-xl mt-5 mx-[5%] lg:mx-0">
                 Moving forward I am investing my time and energy into mastering
                 thew craft of web development. I like to focus on the details
                 for a cleaner, bigger picture. Every major idea I have comes
