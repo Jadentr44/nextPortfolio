@@ -27,7 +27,7 @@ export default function AboutMe({ scrollSkills }) {
         <header className="mt-5 w-full flex justify-center items-center ">
           <div className="  w-fit">
             <div className="text-lg lg:text-2xl">Hi im</div>
-            <div className="text-2xl lg:text-6xl xl:text-7xl">
+            <div className="text-2xl lg:text-6xl lg:text-7xl">
               Jaden Rodriguez
             </div>
             <div className=" float-right  lg:mt-4 text-lg lg:text-2xl">
@@ -43,37 +43,37 @@ export default function AboutMe({ scrollSkills }) {
             <Me />
           </div>
           <div className=" lg:w-2/3 h-[70vh] mt-5  lg:mx-[5%] relative">
-          <button
-                onMouseOver={() => setHover(true)}
-                onMouseOut={() => setHover(false)}
-                onClick={() => scrollSkills()}
-                className={`${
-                  hovered && "animate-wiggle"
-                } bg-red-500 py-2 px-3 mt-12 rounded-full text-white shadow-lg w-fit absolute bottom-6 lg:bottom-0 lg:left-0 right-5`}
-              >
-                See My Skills
-              </button>
-              <div className="flex justify-around mt-4 lg:mt-10">
-                <div className="lg:w-[10vw] w-[30vw] lg:h-[10vw]  rounded-xl  bg-red-500 text-center text-white">
-                  <p className="text-xl">hobbies:</p>
-                  <ol className="flex flex-col items-center ">
+            <button
+              onMouseOver={() => setHover(true)}
+              onMouseOut={() => setHover(false)}
+              onClick={() => scrollSkills()}
+              className={`${
+                hovered && "animate-wiggle"
+              } bg-red-500 py-2 px-3 mt-12 rounded-full text-white shadow-lg w-fit absolute bottom-6 lg:bottom-0 lg:left-0 right-5`}
+            >
+              See My Skills
+            </button>
+            <div className="flex justify-around mt-4 lg:mt-10">
+              <div className="lg:w-[10vw] w-[30vw] lg:h-[10vw]  rounded-xl  bg-red-500 text-center text-white">
+                <p className="text-xl">hobbies:</p>
+                <ol className="flex flex-col items-center ">
                   <li className="flex items-center my-[3%]">
                     <Game />
                     <p className="ml-2 "> Gaming</p>
                   </li>
                   <li className="flex items-center my-[3%]">
                     <Chess />
-                    <p className="ml-2">Chess</p> 
+                    <p className="ml-2">Chess</p>
                   </li>
                   <li className="flex items-center my-[3%]">
                     <Hiking />
-                   <p className="ml-2">  Hiking</p>
+                    <p className="ml-2"> Hiking</p>
                   </li>
-                  </ol>
-                </div>
-                <div className="lg:w-[10vw] w-[30vw] lg:h-[10vw] rounded-xl  bg-red-500 text-center text-white">
-                  <p className="text-xl">Interests:</p>
-                  <ol className="flex flex-col items-center ">
+                </ol>
+              </div>
+              <div className="lg:w-[10vw] w-[30vw] lg:h-[10vw] rounded-xl  bg-red-500 text-center text-white">
+                <p className="text-xl">Interests:</p>
+                <ol className="flex flex-col items-center ">
                   <li className="flex items-center my-[3%]">
                     <Cooking />
                     <p className="ml-2"> Cooking</p>
@@ -84,27 +84,27 @@ export default function AboutMe({ scrollSkills }) {
                   </li>
                   <li className="flex items-center my-[3%]">
                     <WorkingOut />
-                    <p className="ml-2">Fitness</p> 
+                    <p className="ml-2">Fitness</p>
                   </li>
-                  </ol>
-                </div>
-                <div className="lg:w-[10vw] w-[30vw] lg:h-[10vw]  rounded-xl  bg-red-500"></div>
+                </ol>
               </div>
+              <div className="lg:w-[10vw] w-[30vw] lg:h-[10vw]  rounded-xl  bg-red-500"></div>
+            </div>
             <p className="lg:text-xl mt-4 lg:mt-12 mx-[5%] lg:mx-0">
-            I am interested in all kinds of code. I was a huge video game
-            enthusiast when i was younger which translated into my interested in
-            computers. I was first introduced to coding when I joined the
-            robotics team at my high school. Since then, I have played with
-            programming robotics, game development, automation, and now web
-            development
+              I am interested in all kinds of code. I was a huge video game
+              enthusiast when i was younger which translated into my interested
+              in computers. I was first introduced to coding when I joined the
+              robotics team at my high school. Since then, I have played with
+              programming robotics, game development, automation, and now web
+              development
             </p>
             <p className="lg:text-xl mt-5 mx-[5%] lg:mx-0">
-                Moving forward I am investing my time and energy into mastering
-                thew craft of web development. I like to focus on the details
-                for a cleaner, bigger picture. Every major idea I have comes
-                from a good white boarding session and research to ensure my
-                plan will be effective
-              </p>
+              Moving forward I am investing my time and energy into mastering
+              thew craft of web development. I like to focus on the details for
+              a cleaner, bigger picture. Every major idea I have comes from a
+              good white boarding session and research to ensure my plan will be
+              effective
+            </p>
           </div>
         </main>
       </div>

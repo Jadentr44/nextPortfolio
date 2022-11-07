@@ -1,12 +1,13 @@
 import React, { useState, useRef } from "react";
-import IsVisible from "react-is-visible";
+
 import Chart from "./Chart";
 import BsArrowReturnLeft from "./icons/Arrow";
 import FEchart from "./FEchart";
 import FEkey from "./FEkey";
 import BEchart from "./BEchart";
 import BEkey from "./BEkey";
-import { motion } from "framer-motion";
+import OtherChart from "./OtherChart";
+import Otherkey from "./Otherkey";
 export default function Skill() {
   const [skills, setSkills] = useState(undefined);
   const [showCart, setChart] = useState(false);
@@ -14,7 +15,7 @@ export default function Skill() {
   function renderSkillsPie(width) {
     if (skills === "FrontEnd") return <FEchart />;
     if (skills === "BackEnd") return <BEchart />;
-    if (skills === "Other") return <div className="w-[25vw]">Other</div>;
+    if (skills === "Other") return <OtherChart />;
     return (
       <div className=" h-[25vw] w-[25vw] flex flex-col justify-center items-center">
         Click a Skill
@@ -26,8 +27,8 @@ export default function Skill() {
   function renderSkillsKey() {
     if (skills === "FrontEnd") return <FEkey size={"45"} />;
     if (skills === "BackEnd") return <BEkey size={"45"} />;
-    if (skills === "Other") return <FEkey size={"45"} />;
-    return <div className=" h-[30vw] xl:h-0"></div>;
+    if (skills === "Other") return <Otherkey size={"45"} />;
+    return <div className=" h-[30vw] lg:h-0"></div>;
   }
 
   return (

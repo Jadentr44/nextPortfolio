@@ -8,7 +8,7 @@ import Contact from "../components/Contact";
 import TrackVisibility from "react-on-screen";
 export default function Home() {
   const [page, setPage] = useState(0);
-  const home = useRef()
+  const home = useRef();
   const skillSection = useRef();
   const aboutMe = useRef();
   const projects = useRef();
@@ -60,14 +60,14 @@ export default function Home() {
       />
       <div className=" overflow-x-hidden lg:mr-[15%]  bg-[#DFF1FF]">
         <section ref={home} className="h-fit relative ">
-        <TrackVisibility className="absolute top-[75vh]">
+          <TrackVisibility className="absolute top-[75vh]">
             {({ isVisible }) => (isVisible ? setPage(0) : "")}
           </TrackVisibility>
           <Splash scrollAbout={scrollAbout} />
         </section>
 
         <section ref={aboutMe} className="h-fit relative">
-        <TrackVisibility className="absolute top-[75vh]">
+          <TrackVisibility className="absolute top-[75vh]">
             {({ isVisible }) => (isVisible ? setPage(1) : "")}
           </TrackVisibility>
           <AboutMe scrollSkills={scrollSkills} />

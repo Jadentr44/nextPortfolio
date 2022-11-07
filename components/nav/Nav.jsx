@@ -13,11 +13,8 @@ export default function Nav({
   scrollContact,
   page,
   setPage,
-  scrollHome
+  scrollHome,
 }) {
-
-
-
   return (
     <>
       {/* computer nav */}
@@ -32,7 +29,7 @@ export default function Nav({
           <li
             className="my-1 cursor-pointer"
             onClick={() => {
-              scrollHome()
+              scrollHome();
             }}
           >
             <motion.div
@@ -52,7 +49,6 @@ export default function Nav({
           <li
             className="my-1 cursor-pointer"
             onClick={() => {
-              
               scrollAbout();
             }}
           >
@@ -72,7 +68,6 @@ export default function Nav({
           <li
             className="my-1 cursor-pointer"
             onClick={() => {
-             
               scrollSkills();
             }}
           >
@@ -92,7 +87,6 @@ export default function Nav({
           <li
             className="my-1 cursor-pointer"
             onClick={() => {
-             
               scrollProjects();
             }}
           >
@@ -112,7 +106,6 @@ export default function Nav({
           <li
             className="my-1 cursor-pointer"
             onClick={() => {
-             
               scrollContact();
             }}
           >
@@ -137,7 +130,9 @@ export default function Nav({
         className=" lg:hidden fixed bottom-5 left-8 right-8 border-2 rounded-full p-2 bg-white flex justify-between "
       >
         <div
-          onClick={() => {scrollHome()}}
+          onClick={() => {
+            scrollHome();
+          }}
           style={{ background: page == 0 ? "#EF4444" : "white" }}
           className="w-[15%] border rounded-full p-2"
         >

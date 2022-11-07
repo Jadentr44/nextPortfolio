@@ -1,16 +1,14 @@
-import React from "react";
-import { PieChart } from "react-minimal-pie-chart";
-
-export default function FEchart() {
+import React from 'react'
+import { PieChart } from 'react-minimal-pie-chart';
+export default function OtherChart() {
   const FEskills = [
-    { title: "HTML", value: 1, color: "#f97316" },
-    { title: "CSS", value: 1, color: "#0ea5e9" },
-    { title: "Javascript", value: 1, color: "#facc15" },
-    { title: "tailwind", value: 1, color: "lightblue" },
-    { title: "Jquery", value: 1, color: "blue" },
-    { title: "Bootstrap", value: 1, color: "purple" },
+    { title: "VScode", value: 1, color: "blue" },
+    { title: "linux", value: 1, color: "yellow" },
+    { title: "insomnia", value: 1, color: "purple" },
+    { title: "github", value: 1, color: "darkgrey" },
+    { title: "git", value: 1, color: "green" },
 
-    { title: "React", value: 1, color: "#0e7490" },
+    
   ];
   return (
     <div className=" w-[40vw] lg:w-[25vw] h-[40vw] lg:h-[25vw]     relative">
@@ -37,7 +35,7 @@ export default function FEchart() {
           rounded
           radius={45}
           lineWidth={15}
-          label={({ dataEntry }) => "Front-end"}
+          label={({ dataEntry }) => "Other"}
           labelPosition={0}
           labelStyle={{
             fill: "#EF4444",

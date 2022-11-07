@@ -12,7 +12,7 @@ export default function BEchart() {
   ];
 
   return (
-    <div className=" w-[40vw] xl:w-[25vw] h-[40vw] xl:h-[25vw]     relative">
+    <div className=" w-[40vw] lg:w-[25vw] h-[40vw] lg:h-[25vw]     relative">
       <div className="absolute top-0 h-full w-full">
         <PieChart
           data={BEskills}
@@ -42,7 +42,7 @@ export default function BEchart() {
             fill: "#EF4444",
             pointerEvents: "none",
             fontSize: "10",
-            fontFamily: 'Alfa Slab One, cursive'
+            fontFamily: "Alfa Slab One, cursive",
           }}
         />
       </div>

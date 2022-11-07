@@ -6,7 +6,7 @@ export default function Contact() {
   return (
     <div className="h-screen relative">
       <div className="  px-[10%] ">
-        <h2 className="text-center text-7xl lg:pt-12">Contact Me</h2>
+        <h2 className="text-center text-7xl ">Contact Me</h2>
         <h3 className="text-center text-xl mt-5 mb-3">
           If you made it this far, you must have seen something you like <br />
           feel free to reach out with any questions

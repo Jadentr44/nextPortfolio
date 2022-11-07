@@ -11,7 +11,7 @@ import {
 import Bar from "./Bar";
 export default function FEkey({ size }) {
   return (
-    <div className="flex flex-wrap justify-between xl:justify-around  w-full xl:w-[40vw] max-h-[30vw] mx-auto">
+    <div className="flex flex-wrap justify-between lg:justify-around  w-full lg:w-[40vw] max-h-[30vw] mx-auto">
       <div className="flex  mx-3 my-2">
         <Html size={size} />
         <Bar name={"HTML"} color={"#f97316"} />

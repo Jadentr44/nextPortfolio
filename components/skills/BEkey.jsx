@@ -11,7 +11,7 @@ import {
 import Bar from "./Bar";
 export default function BEkey({ size }) {
   return (
-    <div className="flex flex-wrap justify-between xl:justify-around  w-full xl:w-[40vw] max-h-[30vw] text-black mx-auto">
+    <div className="flex flex-wrap justify-between lg:justify-around  w-full lg:w-[40vw] max-h-[30vw] text-black mx-auto">
       <div className="flex  mx-3 my-2">
         <Node size={size} />
         <Bar name={"Node.js"} color={"lightgreen"} />
