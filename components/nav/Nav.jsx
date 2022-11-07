@@ -1,8 +1,4 @@
 import React, { useState } from "react";
-import { Hamburger, Resume, Github, Linkedin, Close } from "./icons/";
-import { Next } from "../skills/icons/backend";
-import Tailwind from "../skills/icons/frontend/TailWind";
-import { FaReact } from "../skills/icons/frontend";
 import { motion } from "framer-motion";
 import Home from "./icons/Home";
 import Person from "./icons/Person";
@@ -10,49 +6,18 @@ import Skills from "./icons/Skills";
 import Projects from "./icons/Projects";
 import Email from "./icons/Email";
 
-export default function Nav({ scrollAbout, scrollSkills, scrollProjects,scrollContact,page,setPage }) {
-  const [nav, setNav] = useState(false);
-  const openNav = { right: 0, transition: "right 600ms ease-in", zIndex: 10 };
-  const [iconRotate, setRotate] = useState("0deg");
-  const [icon, setIcon] = useState(true);
-  const [opening, setOpening] = useState(false);
-  const smClosedNav = {
-    right: "-20vw",
-    transition: "right 600ms ease-in",
-    zIndex: 10,
-  };
-  const mdClosedNav = {
-    right: "-60vw",
-    transition: "right 600ms ease-in",
-    zIndex: 10,
-  };
-  const [openBoolean, setBoolean] = useState(true);
-  function switchNav() {
-    if (opening) return;
+export default function Nav({
+  scrollAbout,
+  scrollSkills,
+  scrollProjects,
+  scrollContact,
+  page,
+  setPage,
+  scrollHome
+}) {
 
-    if (openBoolean) {
-      setOpening(true);
-      setBoolean(false);
-      setNav(true);
-      setRotate("360deg");
-      setTimeout(() => {
-        setOpening(false);
 
-        setIcon(false);
-      }, 490);
-      console.log("true, opening");
-    } else {
-      setOpening(true);
-      setBoolean(true);
-      setNav(false);
-      setRotate("0deg");
-      setTimeout(() => {
-        setOpening(false);
-        setIcon(true);
-      }, 490);
-      console.log("false, closed");
-    }
-  }
+
   return (
     <>
       {/* computer nav */}
@@ -61,13 +26,13 @@ export default function Nav({ scrollAbout, scrollSkills, scrollProjects,scrollCo
           boxShadow: "inset 0 0 15px  black",
           zIndex: 0,
         }}
-        className="  hidden lg:block top-0 fixed right-0 w-[15vw] bg-red-500 h-screen"
+        className="  hidden lg:block top-0 fixed right-0 w-[15vw] bg-red-500 h-screen "
       >
         <ul className="flex flex-col items-center justify-center h-full text-white">
           <li
             className="my-1 cursor-pointer"
             onClick={() => {
-              setPage(0);
+              scrollHome()
             }}
           >
             <motion.div
@@ -87,7 +52,7 @@ export default function Nav({ scrollAbout, scrollSkills, scrollProjects,scrollCo
           <li
             className="my-1 cursor-pointer"
             onClick={() => {
-              setPage(1);
+              
               scrollAbout();
             }}
           >
@@ -107,7 +72,7 @@ export default function Nav({ scrollAbout, scrollSkills, scrollProjects,scrollCo
           <li
             className="my-1 cursor-pointer"
             onClick={() => {
-              setPage(2);
+             
               scrollSkills();
             }}
           >
@@ -117,12 +82,17 @@ export default function Nav({ scrollAbout, scrollSkills, scrollProjects,scrollCo
             >
               <Skills />
             </motion.div>
-            <motion.p animate={{fontSize:page==2?"2.25rem":"0rem"}} className="text-center ">Skills</motion.p>
+            <motion.p
+              animate={{ fontSize: page == 2 ? "2.25rem" : "0rem" }}
+              className="text-center "
+            >
+              Skills
+            </motion.p>
           </li>
           <li
             className="my-1 cursor-pointer"
             onClick={() => {
-              setPage(3);
+             
               scrollProjects();
             }}
           >
@@ -132,12 +102,17 @@ export default function Nav({ scrollAbout, scrollSkills, scrollProjects,scrollCo
             >
               <Projects />
             </motion.div>
-            <motion.p animate={{fontSize:page==3?"2.25rem":"0rem"}} className="text-center ">Projects</motion.p>
+            <motion.p
+              animate={{ fontSize: page == 3 ? "2.25rem" : "0rem" }}
+              className="text-center "
+            >
+              Projects
+            </motion.p>
           </li>
           <li
             className="my-1 cursor-pointer"
             onClick={() => {
-              setPage(4);
+             
               scrollContact();
             }}
           >
@@ -147,13 +122,63 @@ export default function Nav({ scrollAbout, scrollSkills, scrollProjects,scrollCo
             >
               <Email />
             </motion.div>
-            <motion.p animate={{fontSize:page==4?"2.25rem":"0rem"}} className="text-center ">Contact Me</motion.p>
+            <motion.p
+              animate={{ fontSize: page == 4 ? "2.25rem" : "0rem" }}
+              className="text-center "
+            >
+              Contact Me
+            </motion.p>
           </li>
         </ul>
       </div>
       {/* phone nav */}
-      <div style={{zIndex:100}} className="block lg:hidden fixed bottom-5 left-8 right-8 border-2 rounded-full p-2 bg-white">
-    Nav
+      <div
+        style={{ zIndex: 100 }}
+        className=" lg:hidden fixed bottom-5 left-8 right-8 border-2 rounded-full p-2 bg-white flex justify-between "
+      >
+        <div
+          onClick={() => {scrollHome()}}
+          style={{ background: page == 0 ? "#EF4444" : "white" }}
+          className="w-[15%] border rounded-full p-2"
+        >
+          <Home />
+        </div>
+        <div
+          onClick={() => {
+            scrollAbout();
+          }}
+          style={{ background: page == 1 ? "#EF4444" : "white" }}
+          className="w-[15%] border rounded-full p-2"
+        >
+          <Person />
+        </div>
+        <div
+          onClick={() => {
+            scrollSkills();
+          }}
+          style={{ background: page == 2 ? "#EF4444" : "white" }}
+          className="w-[15%] border rounded-full p-2"
+        >
+          <Skills />
+        </div>
+        <div
+          onClick={() => {
+            scrollProjects();
+          }}
+          style={{ background: page == 3 ? "#EF4444" : "white" }}
+          className="w-[15%] border rounded-full p-2"
+        >
+          <Projects />
+        </div>
+        <div
+          onClick={() => {
+            scrollContact();
+          }}
+          style={{ background: page == 4 ? "#EF4444" : "white" }}
+          className="w-[15%] border rounded-full p-2"
+        >
+          <Email />
+        </div>
       </div>
     </>
   );

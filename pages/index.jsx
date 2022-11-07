@@ -8,10 +8,18 @@ import Contact from "../components/Contact";
 import TrackVisibility from "react-on-screen";
 export default function Home() {
   const [page, setPage] = useState(0);
+  const home = useRef()
   const skillSection = useRef();
   const aboutMe = useRef();
   const projects = useRef();
   const contact = useRef();
+  const scrollHome = () => {
+    home.current.scrollIntoView({
+      behavior: "smooth",
+      block: "nearest",
+      inline: "end",
+    });
+  };
   const scrollAbout = () => {
     aboutMe.current.scrollIntoView({
       behavior: "smooth",
@@ -44,14 +52,14 @@ export default function Home() {
     <>
       <Nav
         page={page}
-        setPage={setPage}
+        scrollHome={scrollHome}
         scrollContact={scrollContact}
         scrollAbout={scrollAbout}
         scrollSkills={scrollSkills}
         scrollProjects={scrollProjects}
       />
       <div className=" overflow-x-hidden lg:mr-[15%]  bg-[#DFF1FF]">
-        <section className="h-fit relative ">
+        <section ref={home} className="h-fit relative ">
         <TrackVisibility className="absolute top-[75vh]">
             {({ isVisible }) => (isVisible ? setPage(0) : "")}
           </TrackVisibility>
