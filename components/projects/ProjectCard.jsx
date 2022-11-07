@@ -7,7 +7,7 @@ import Github from "./icons/Github";
 import RiComputerLine from "./icons/Website"; 
 
 export default function ProjectCard({ tech, name,desc,path}) {
-  const [imgW, setW] = useState("85%");
+  const [imgW, setW] = useState("99%");
   const [arrowDeg, setArrow] = useState("0deg");
   const [showLinks,setShow] = useState(false)
   const url = `url('${path}')`
@@ -20,7 +20,7 @@ export default function ProjectCard({ tech, name,desc,path}) {
       <motion.div
         animate={{ width: imgW }}
         transition={{type:"tween"}}
-        style={{ backgroundSize: "auto 100%",backgroundImage:url }}
+        style={{ backgroundSize: "auto 99%",backgroundImage:url }}
         
         className={` h-full   absolute left-0 z-10 rounded-sm`}
       ></motion.div>
@@ -34,8 +34,8 @@ export default function ProjectCard({ tech, name,desc,path}) {
         <motion.div
           animate={{ rotate: arrowDeg }}
           onClick={() => {
-            imgW == "85%" ? setW("0%") : setW("85%");
-            imgW == "85%" ? setArrow("180deg") : setArrow("0deg");
+            imgW == "99%" ? setW("0%") : setW("99%");
+            imgW == "99%" ? setArrow("180deg") : setArrow("0deg");
             !showLinks?setShow(true):setShow(false)
           }}
           className="border-2 border-red-500 h-8 w-10 lg:h-14 lg:w-20 rounded-full p-2 bg-red-500 cursor-pointer  text-white"
@@ -44,7 +44,7 @@ export default function ProjectCard({ tech, name,desc,path}) {
         </motion.div>
         <div className="h-full w-1 bg-red-500"></div>
       </motion.div>
-      <div className="w-full min-h-full px-[15%] bg-[#8DACE1] ">
+      <div className="w-full min-h-full px-[10%] bg-[#8DACE1] ">
         <h1 className="text-center text-md lg:text-4xl max-w-[80%]  mx-auto">{name}</h1>
         <h2 className="text-center text-sm lg:text-lg my-2 lg:my-3 font-bold">
         {tech.map((e,i)=>{

@@ -4,6 +4,7 @@ import Cooking from "./icons/Cooking";
 import Hiking from "./icons/Hiking";
 import WorkingOut from "./icons/WorkingOut";
 import Music from "./icons/Music";
+import Chess from "./icons/Chess";
 import { motion } from "framer-motion";
 import IsVisible from "react-is-visible/lib/IsVisible";
 import Me from "./Me";
@@ -61,8 +62,8 @@ export default function AboutMe({ scrollSkills }) {
                     <p className="ml-2 "> Gaming</p>
                   </li>
                   <li className="flex items-center my-[3%]">
-                    <WorkingOut />
-                    <p className="ml-2"> Working out</p> 
+                    <Chess />
+                    <p className="ml-2">Chess</p> 
                   </li>
                   <li className="flex items-center my-[3%]">
                     <Hiking />
@@ -80,6 +81,10 @@ export default function AboutMe({ scrollSkills }) {
                   <li className="flex items-center my-[3%]">
                     <Music />
                     <p className="ml-2"> Music</p>
+                  </li>
+                  <li className="flex items-center my-[3%]">
+                    <WorkingOut />
+                    <p className="ml-2">Fitness</p> 
                   </li>
                   </ol>
                 </div>
