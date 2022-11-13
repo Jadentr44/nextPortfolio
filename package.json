@@ -14,6 +14,7 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.6.0",
+    "react-slide-fade-in": "^1.0.7",
     "react-text-transition": "^3.0.2"
   },
   "devDependencies": {

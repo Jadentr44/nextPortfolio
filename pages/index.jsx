@@ -1,9 +1,10 @@
 import React, { useRef, useState } from "react";
-import { Nav } from "../components";
+import { Nav,Splash} from "../components";
 export default function Home() {
   return (
     <>
       <Nav />
+      <Splash />
     </>
   );
 }
