@@ -35,7 +35,7 @@ export default function Splash() {
       from="bottom"
       positionOffset={'5vw'}
       triggerOffset={0}
-      delayInMilliseconds={4500}
+      delayInMilliseconds={3500}
     >
       
       <h1 className='text-9xl font-semibold'>Jaden Rodriguez</h1>
@@ -54,7 +54,7 @@ export default function Splash() {
     from="bottom"
     positionOffset={'5vw'}
     triggerOffset={0}
-    delayInMilliseconds={5000}>
+    delayInMilliseconds={4000}>
       <p className='w-[75%] mt-12 text-2xl font-semibold'>I am a full stack web developer, based in Texas. I can build responsive layouts, effectively manage a database, and almost anything in between.</p>
     </FadeIn>
       </div>
