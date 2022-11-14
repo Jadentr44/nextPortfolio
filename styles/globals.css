@@ -28,6 +28,3 @@ h2{
 .active{
   font-weight: bold;
 }
-.main::-webkit-scrollbar {
-  display: none;
-}

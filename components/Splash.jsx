@@ -11,12 +11,12 @@ export default function Splash() {
   useEffect(() => {
     const intervalId = setInterval(
       () => setIndex((index) => index + 1),
-      2500 // every 3 seconds
+      3000 
     );
     return () => clearTimeout(intervalId);
   }, []);
   return (
-    <div style={{backgroundSize:"100% 100%"}} className='bg-[url(https://images.pexels.com/photos/93405/pexels-photo-93405.jpeg?auto=compress&cs=tinysrgb&w=1600)]  bg-no-repeat h-screen flex justify-center  items-center w-screen z-10 relative'>
+    <div id='home' style={{backgroundSize:"100% 100%"}} className='bg-[url(https://images.pexels.com/photos/93405/pexels-photo-93405.jpeg?auto=compress&cs=tinysrgb&w=1600)]  bg-no-repeat h-screen flex justify-center  items-center w-screen z-10 relative'>
       <div className=' absolute bottom-0 left-0 right-0 bg-gradient-to-t from-gray-100  h-36'></div>
       <motion.div
       animate={{
@@ -29,10 +29,10 @@ export default function Splash() {
       }}
       className="absolute left-0 right-0 top-0 bottom-0 flex justify-center items-center"
       >
-        <img className='w-[20%]' src="/logo.svg" alt="" />
+        <img className='w-[50%]' src="/logo.svg" alt="" />
       </motion.div>
       <div className='max-w-[63rem]'>
-      <h1 className='text-8xl font-semibold flex'>{"Jaden Rodriuez".split("").map((e,i)=>{
+      <h1 className='lg:text-8xl md:text-6xl text-5xl font-semibold flex'>{"Jaden Rodriuez".split("").map((e,i)=>{
         return <FadeIn key={i} from="bottom"
         positionOffset={'5vw'}
         triggerOffset={0}
@@ -48,7 +48,7 @@ export default function Splash() {
       
         
       
-    <h2 className=' flex text-4xl font-semibold justify-end mt-5'>
+    <h2 className=' flex text-2xl font-semibold justify-end mt-5'>
        
     <TextTransition direction={"down"} springConfig={presets.wobbly}>
                 {words[index % words.length]}
