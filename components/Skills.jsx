@@ -11,7 +11,7 @@ export default function Skills() {
         <div className='flex items-center'>
 
           <div className="h-1 w-full bg-black"></div>
-        <h1 className=" mx-2 text-5xl   ">Skills</h1>
+        <h1 className=" mx-2 text-4xl   ">Skills</h1>
           <div className="h-1 w-full bg-black"></div>
         </div>
         <div className='flex justify-between mt-16'>
@@ -22,10 +22,10 @@ export default function Skills() {
                 <BsCodeSlash size={"3rem"} />
                 </div>
               </div>
-              <h3 className='text-center font-semibold text-black text-5xl mt-10 '>Front-end</h3>
+              <h3 className='text-center font-semibold text-black text-3xl mt-10 '>Front-end</h3>
               <div className='pl-[15%]   '>
                   {FeSkills.map((e,i)=>{
-                    return <div key={i} className='w-full my-3 text-3xl'>{e}</div>
+                    return <div key={i} className='w-full my-3 text-xl'>{e}</div>
                   })}
               </div>
             </div>
@@ -36,10 +36,10 @@ export default function Skills() {
                 <FiDatabase size={"3rem"} />
                 </div>
               </div>
-              <h3 className='text-center font-semibold text-black text-5xl mt-10 '>Back-end</h3>
+              <h3 className='text-center font-semibold text-black text-3xl mt-10 '>Back-end</h3>
               <div className='pl-[15%]   '>
                   {BeSkills.map((e,i)=>{
-                    return <div key={i} className='w-full my-3 text-3xl'>{e}</div>
+                    return <div key={i} className='w-full my-3 text-xl'>{e}</div>
                   })}
               </div>
             </div>
@@ -50,10 +50,10 @@ export default function Skills() {
                 <BsTerminal size={"3rem"} />
                 </div>
               </div>
-              <h3 className='text-center font-semibold text-black text-5xl mt-10 '>Other</h3>
+              <h3 className='text-center font-semibold text-black text-3xl mt-10 '>Other</h3>
               <div className='pl-[15%]   '>
                   {OtherSkills.map((e,i)=>{
-                    return <div key={i} className='w-full my-3 text-3xl'>{e}</div>
+                    return <div key={i} className='w-full my-3 text-xl'>{e}</div>
                   })}
               </div>
             </div>

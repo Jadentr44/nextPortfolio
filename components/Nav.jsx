@@ -11,23 +11,23 @@ export default function Nav() {
       from="top"
       positionOffset={0}
       triggerOffset={0}
-      delayInMilliseconds={6000}
+      delayInMilliseconds={6500}
     >
       <div className='flex justify-between items-center'>
         <div className='flex  items-center relative pb-2 my-2' >
-          <img className='h-16 mr-4' src="/logo.svg" alt="" />
+          <img className='h-[3rem] mr-2' src="/logo.svg" alt="" />
           <div onMouseEnter={toggleWidth} onMouseLeave={toggleWidth} className='relative py-3'>
-          <h1 className='cursor-pointer z-10 text-5xl font-bold '>Jaden Rodriguez</h1>
+          <h1 className='cursor-pointer z-10 text-3xl font-bold '>Jaden Rodriguez</h1>
           <motion.div transition={{seconds:2}} animate={{width:width}} className='h-2 absolute bottom-0 left-0 right-0 w-0 bg-red-500 rounded-full mx-auto'></motion.div>
           </div>
           
         </div>
         <div>
-          <ul className="flex text-3xl">
-            <NavLi offset={-50} name={"About"} location={"about"} />
-            <NavLi offset={-50} name={"Skills"} location={"skills"} />
-            <NavLi offset={-50} name={"Project"} location={"projects"} />
-            <NavLi name={"Contact"} location={"#"} />
+          <ul className="flex text-xl">
+            <NavLi offset={-100} name={"About"} location={"about"} />
+            <NavLi offset={-100} name={"Skills"} location={"skills"} />
+            <NavLi offset={-100} name={"Project"} location={"projects"} />
+            <NavLi offset={-100} name={"Contact"} location={"contact"} />
             
           </ul>
         </div>
