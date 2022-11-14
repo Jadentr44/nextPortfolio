@@ -1,17 +1,17 @@
 import React, { useRef, useState } from "react";
-import { Nav,Splash,About} from "../components";
-import { Scrollbars } from 'react-custom-scrollbars-2';
+import { Nav,Splash,About,Skills} from "../components";
 export default function Home() {
   return (
     
-    <div className="overflow-hidden" >
-      <div className=" ">
+    <div className="overflow-hidden bg-gray-100" >
+      
 
       <Nav />
       <Splash />
       <About />
+      <Skills />
       <div className="h-screen"></div>
-      </div>
+      
     </div>
   );
 }

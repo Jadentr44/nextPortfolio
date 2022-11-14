@@ -24,8 +24,8 @@ export default function Nav() {
         </div>
         <div>
           <ul className="flex text-3xl">
-            <NavLi offset={-200} name={"About"} location={"about"} />
-            <NavLi name={"Skills"} location={"#"} />
+            <NavLi offset={-50} name={"About"} location={"about"} />
+            <NavLi offset={-50} name={"Skills"} location={"skills"} />
             <NavLi name={"Project"} location={"#"} />
             <NavLi name={"Contact"} location={"#"} />
             

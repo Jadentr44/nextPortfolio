@@ -4,8 +4,8 @@ import {FaChessKnight,FaRunning,FaMusic} from 'react-icons/fa'
 import {IoLogoGameControllerA} from 'react-icons/io'
 export default function About() {
   return (
-    <div className="px-[10%] pt-24 flex " id="about">
-      <div className="w-1/3 flex items-end ">
+    <div className="px-[10%] pt-48 flex " id="about">
+      <div className="w-1/3  ">
         <img src="/me.svg" alt="" />
       </div>
       <div className="w-full h-auto  pl-[10%]">

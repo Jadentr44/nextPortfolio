@@ -16,7 +16,7 @@ export default function Splash() {
   }, []);
   return (
     <div style={{backgroundSize:"100% 100%"}} className='bg-[url(https://images.pexels.com/photos/93405/pexels-photo-93405.jpeg?auto=compress&cs=tinysrgb&w=1600)]  bg-no-repeat h-screen flex justify-center  items-center w-screen z-10 relative'>
-      <div className=' absolute bottom-0 left-0 right-0 bg-gradient-to-t from-white  h-36'></div>
+      <div className=' absolute bottom-0 left-0 right-0 bg-gradient-to-t from-gray-100  h-36'></div>
       <motion.div
       animate={{
         scale: [0, 1, 1,1, 0],
