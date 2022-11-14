@@ -26,7 +26,7 @@ export default function Nav() {
           <ul className="flex text-3xl">
             <NavLi offset={-50} name={"About"} location={"about"} />
             <NavLi offset={-50} name={"Skills"} location={"skills"} />
-            <NavLi name={"Project"} location={"#"} />
+            <NavLi offset={-50} name={"Project"} location={"projects"} />
             <NavLi name={"Contact"} location={"#"} />
             
           </ul>

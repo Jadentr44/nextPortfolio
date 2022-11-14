@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import { Nav,Splash,About,Skills} from "../components";
+import { Nav,Splash,About,Skills,Projects} from "../components";
 export default function Home() {
   return (
     
@@ -10,6 +10,7 @@ export default function Home() {
       <Splash />
       <About />
       <Skills />
+      <Projects />
       <div className="h-screen"></div>
       
     </div>
