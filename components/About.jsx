@@ -11,7 +11,7 @@ export default function About() {
       <div className="lg:w-2/3 h-auto  lg:pl-[10%]">
         <div className="flex  items-center">
           <div className="h-1 w-full bg-black"></div>
-        <h1 className=" mx-2 text-4xl   ">About<span className="mx-2"></span>Me</h1>
+        <h1 className=" mx-2 lg:text-4xl text-3xl  ">About<span className="mx-2"></span>Me</h1>
           <div className="h-1 w-full bg-black"></div>
           <img className="w-1/3 block lg:hidden lg:w-0" src="/me.svg" alt="" />
         </div>

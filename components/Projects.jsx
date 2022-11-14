@@ -2,12 +2,13 @@ import React from 'react'
 import ProjectCard from './ProjectCard'
 export default function Projects() {
   return (
-    <div className="flex px-[10%] pt-48" id='projects'>
-      <div className='w-1/3'><img src="projects.svg" alt="" /></div>
-      <div className='w-2/3 '>
-      <div className="flex items-center ">
+    <div className="flex lg:px-[10%] px-[5%] mt-14 lg:pt-48" id='projects'>
+      <div className='w-1/3 lg:block hidden'><img src="projects.svg" alt="" /></div>
+      <div className='lg:w-2/3 '>
+      <div className="flex items-center  ">
+        <img className='w-1/3 lg:hidden block' src="/projects.svg" alt="" />
         <div className='h-1 my-auto w-full bg-black'></div>
-        <h1 className=" mx-2 text-4xl   ">Projects</h1>
+        <h1 className=" mx-2 lg:text-4xl text-3xl   ">Projects</h1>
         <div className='h-1 w-full bg-black'></div>
       </div>
         <div className='flex flex-wrap w-full'>

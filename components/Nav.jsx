@@ -54,7 +54,7 @@ export default function Nav() {
         <ul className="flex h-full w-full justify-around items-center ">
           <Link
           onSetActive={()=>setCurrent("0%")}
-            offset={-50}
+            offset={-100}
             className="  w-full"
             smooth
             spy
@@ -68,7 +68,7 @@ export default function Nav() {
 
           <Link
             onSetActive={()=>setCurrent("20%")}
-            offset={-50}
+            offset={-100}
             className="  w-full"
             smooth
             spy
@@ -81,7 +81,7 @@ export default function Nav() {
           </Link>
           <Link
             onSetActive={()=>setCurrent("40%")}
-            offset={-50}
+            offset={-100}
             className="  w-full"
             smooth
             spy
@@ -94,7 +94,7 @@ export default function Nav() {
           </Link>
           <Link
             onSetActive={()=>setCurrent("60%")}
-            offset={-50}
+            offset={-100}
             className="  w-full"
             smooth
             spy
@@ -107,7 +107,7 @@ export default function Nav() {
           </Link>
           <Link
             onSetActive={()=>setCurrent("80%")}
-            offset={-50}
+            offset={-100}
             className="  w-full"
             smooth
             spy

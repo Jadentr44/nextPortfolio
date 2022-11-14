@@ -3,6 +3,7 @@ import { FadeIn } from 'react-slide-fade-in'
 import {IoIosArrowDown} from 'react-icons/io'
 import TextTransition, { presets } from "react-text-transition";
 import { motion } from 'framer-motion';
+import { Link } from 'react-scroll';
 export default function Splash() {
   const words = ["Front-end ", "Back-end ", "Mobile "];
   const [index, setIndex] = useState(0);
@@ -64,12 +65,18 @@ export default function Splash() {
     positionOffset={'5vw'}
     triggerOffset={0}
     delayInMilliseconds={6500}>
+      <Link 
+      smooth
+      to='about'
+      >
       <div className=' animate-bounce'>
         <p className='text-2xl'>
         learn more
         </p>
         <IoIosArrowDown size={"100%"} className='w-16 mx-auto' />
       </div>
+      </Link>
+      
     </FadeIn>
     </div>
       </div>

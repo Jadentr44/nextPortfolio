@@ -11,7 +11,7 @@ export default function Skills() {
         <div className='flex items-center'>
           <img className='w-1/3 lg:hidden block' src="/skills.svg" alt="" />
           <div className="h-1 w-full bg-black"></div>
-        <h1 className=" mx-2 text-4xl   ">Skills</h1>
+        <h1 className=" mx-2 lg:text-4xl text-3xl   ">Skills</h1>
           <div className="h-1 w-full bg-black"></div>
         </div>
         <div className='flex flex-col lg:flex-row justify-between mt-16'>
