@@ -28,15 +28,15 @@ export default function ProjectCard({ name, github, live, tech, desc, img }) {
         animate={{ height: showing ? "0%" : "100%" }}
         className=" z-10 overflow-hidden mx-auto  bg-white text-black border-[1px] rounded-b-md "
       >
-        <h3 className="text-center lg:text-3xl text-2xl px-[20%] border-b-2">
+        <h3 className="text-center lg:text-3xl md:text-2xl text-lg md:px-[20%] px-[25%] border-b-2">
           {name}
         </h3>
-        <p className="text-center lg:text-xl text-lg">Technologies:</p>
+        <p className="text-center lg:text-xl md:text-lg text-md">Technologies:</p>
         <div className="flex flex-wrap justify-center font-semibold px-[10%]">
           {tech.map((e, i) => {
             return (
               <motion.p
-                className="lg:text-xl text-lg"
+                className="lg:text-xl md:text-lg text-md "
                 transition={{ delay: 0.2 * i + 1 }}
                 animate={{
                   opacity: showing ? "0" : "100%",
@@ -51,7 +51,7 @@ export default function ProjectCard({ name, github, live, tech, desc, img }) {
           })}
         </div>
         <motion.p
-          className="px-[10%] lg:text-lg mt-2"
+          className="px-[10%] lg:text-lg md:text-md text-sm mt-2"
           transition={{ delay: 0.2 * tech.length + 1 }}
           animate={{
             opacity: showing ? "0" : "100%",
