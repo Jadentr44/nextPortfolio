@@ -6,7 +6,7 @@ export default function ProjectCard({ name, github, live, tech, desc, img }) {
     <div
       onClick={toggleShowing}
       style={{ background: `url(/${img})`, backgroundSize: "100% 100%" }}
-      className=" cursor-pointer h-auto relative mx-auto w-80% md:w-[45%] mt-10  border-4 border-red-500 rounded-xl "
+      className=" cursor-pointer h-auto relative mx-auto xs:w-[80%] w-[70%] w- md:w-[45%] mt-10  border-4 border-red-500 rounded-xl "
     >
       <div className="absolute top-0 bottom-0  right-0 hover:backdrop-blur-[2px] z-[-1]"></div>
       <a rel="noreferrer" target={"_blank"} href={github}>
@@ -28,7 +28,9 @@ export default function ProjectCard({ name, github, live, tech, desc, img }) {
         animate={{ height: showing ? "0%" : "100%" }}
         className=" z-10 overflow-hidden mx-auto  bg-white text-black border-[1px] rounded-b-md "
       >
-        <h3 className="text-center lg:text-3xl text-2xl px-[20%] border-b-2">{name}</h3>
+        <h3 className="text-center lg:text-3xl text-2xl px-[20%] border-b-2">
+          {name}
+        </h3>
         <p className="text-center lg:text-xl text-lg">Technologies:</p>
         <div className="flex flex-wrap justify-center font-semibold px-[10%]">
           {tech.map((e, i) => {

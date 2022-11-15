@@ -5,7 +5,7 @@ import TextTransition, { presets } from "react-text-transition";
 import { motion } from 'framer-motion';
 import { Link } from 'react-scroll';
 export default function Splash() {
-  const words = ["Front-end ", "Back-end ", "Mobile "];
+  const words = ["Mobile","Front-end ", "Back-end "];
   const [index, setIndex] = useState(0);
 
 
@@ -33,11 +33,11 @@ export default function Splash() {
         <img className='w-[50%]' src="/logo.svg" alt="" />
       </motion.div>
       <div className='max-w-[63rem]'>
-      <h1 className='lg:text-8xl md:text-6xl text-5xl font-semibold flex'>{"Jaden Rodriuez".split("").map((e,i)=>{
+      <h1 className='lg:text-8xl md:text-6xl text-5xl font-semibold flex'>{"Jaden Rodriguez".split("").map((e,i)=>{
         return <FadeIn key={i} from="bottom"
         positionOffset={'5vw'}
         triggerOffset={0}
-        delayInMilliseconds={i*100+3000}>{e}</FadeIn>
+        delayInMilliseconds={i*100+3000}>{i==5?<div className="w-[1.4rem]"></div>:e}</FadeIn>
       })}</h1>
       <FadeIn
       from="bottom"
@@ -58,7 +58,7 @@ export default function Splash() {
     </h2>
     
     </FadeIn>
-    <div className='absolute left-0 right-0 flex justify-center bottom-[5rem]'>
+    <div className='absolute left-0 right-0 flex justify-center bottom-[10vh]'>
 
     <FadeIn
     from="bottom"
