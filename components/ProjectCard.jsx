@@ -6,7 +6,7 @@ export default function ProjectCard({ name, github, live, tech, desc, img }) {
     <div
       onClick={toggleShowing}
       style={{ background: `url(/${img})`, backgroundSize: "100% 100%" }}
-      className=" cursor-pointer h-auto relative mx-auto w-80% lg:w-[40%] mt-10  border-4 border-red-500 rounded-xl "
+      className=" cursor-pointer h-auto relative mx-auto w-80% md:w-[45%] mt-10  border-4 border-red-500 rounded-xl "
     >
       <div className="absolute top-0 bottom-0  right-0 hover:backdrop-blur-[2px] z-[-1]"></div>
       <a href={github}>
