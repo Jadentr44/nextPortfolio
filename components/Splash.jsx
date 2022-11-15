@@ -30,7 +30,7 @@ export default function Splash() {
       }}
       className="absolute left-0 right-0 top-0 bottom-0 flex justify-center items-center"
       >
-        <img className='w-[50%]' src="/logo.svg" alt="" />
+        <img className='w-[50%] lg:w-[30%]' src="/logo.svg" alt="" />
       </motion.div>
       <div className='max-w-[63rem]'>
       <h1 className='lg:text-8xl md:text-6xl text-5xl font-semibold flex'>{"Jaden Rodriguez".split("").map((e,i)=>{
