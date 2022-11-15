@@ -21,7 +21,7 @@ export default function Contact() {
             </div>
             <div className="flex flex-col justify-center h-full">
             <h3 className=" text-center text-3xl font-semibold">Email:</h3>
-            <p className="text-center text-red-500  w-fit mx-auto border-red-500 lg:text-xl text-md hover:text-red-700">
+            <p className="text-center text-red-500  w-fit mx-auto border-red-500 lg:text-xl xs:text-xs text-md hover:text-red-700">
               <a rel="noreferrer" target={"_blank"} className="" href="mailto: rodriguez@jadent.dev">
                 rodriguez@jadent.dev
               </a>
@@ -35,7 +35,7 @@ export default function Contact() {
             </div>
             <div className="flex flex-col justify-center h-full">
             <h3 className=" text-center text-3xl font-semibold">LinkedIn:</h3>
-            <p className="text-center text-red-500  w-fit mx-auto border-red-500 lg:text-xl text-md hover:text-red-700">
+            <p className="text-center text-red-500  w-fit mx-auto border-red-500 lg:text-xl xs:text-xs text-md hover:text-red-700">
               <a rel="noreferrer" target={"_blank"} href="https://www.linkedin.com/in/jaden-rodriguez-59a000242/">
                 Jaden rodriguez
               </a>
@@ -49,7 +49,7 @@ export default function Contact() {
             </div>
             <div className="flex flex-col justify-center h-full">
             <h3 className=" text-center text-3xl font-semibold">Github</h3>
-            <p className="text-center text-red-500  w-fit mx-auto border-red-500 lg:text-xl text-md hover:text-red-700">
+            <p className="text-center text-red-500  w-fit mx-auto border-red-500 lg:text-xl xs:text-xs text-md hover:text-red-700">
               <a rel="noreferrer" target={"_blank"} className="" href="https://github.com/Jadentr44">
                 Jadentr44
               </a>
@@ -63,7 +63,7 @@ export default function Contact() {
             </div>
             <div className="flex flex-col justify-center h-full">
             <h3 className=" text-center text-3xl font-semibold">Twitter</h3>
-            <p className="text-center text-red-500  w-fit mx-auto border-red-500 lg:text-xl text-md hover:text-red-700">
+            <p className="text-center text-red-500  w-fit mx-auto border-red-500 lg:text-xl xs:text-xs text-md hover:text-red-700">
               <a rel="noreferrer" target={"_blank"} className="" href="https://twitter.com/Jadent_dev">
                 Jadent_dev
               </a>

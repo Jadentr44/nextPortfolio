@@ -9,14 +9,14 @@ export default function ProjectCard({ name, github, live, tech, desc, img }) {
       className=" cursor-pointer h-auto relative mx-auto w-80% md:w-[45%] mt-10  border-4 border-red-500 rounded-xl "
     >
       <div className="absolute top-0 bottom-0  right-0 hover:backdrop-blur-[2px] z-[-1]"></div>
-      <a href={github}>
+      <a rel="noreferrer" target={"_blank"} href={github}>
         <img
           className="w-20 rounded-tr-[4%] right-[0] top-[-1px] absolute"
           src="/github.svg"
           alt=""
         />
       </a>
-      <a href={live}>
+      <a rel="noreferrer" target={"_blank"} href={live}>
         <img
           className="w-20 rounded-tl-[4%] left-[0] top-[0] absolute"
           src="/live.svg"
