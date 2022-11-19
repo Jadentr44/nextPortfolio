@@ -100,7 +100,7 @@ export default function Skills() {
         </div>
       </div>
       <div className="lg:w-1/3 lg:block hidden">
-        <img src="/skills.svg" alt="" />
+      <img  src="/skills.svg" alt="" />
       </div>
     </div>
   );
