@@ -46,16 +46,24 @@ export default function About() {
         </div>
         
         <div className=" mt-8 flex justify-around w-1/2">
-          <a className="w-[5rem]" href="">
+          <a className="w-[5rem]"  rel="noreferrer"
+                  target={"_blank"}
+                  href="https://github.com/Jadentr44">
           <AiFillGithub className="text-black hover:text-red-500" size={"100%"} />
           </a>
-          <a className="w-[5rem]" href="">
+          <a  className="w-[5rem]" rel="noreferrer"
+                  target={"_blank"}
+                  href="https://www.linkedin.com/in/jaden-rodriguez-59a000242/">
           <AiFillLinkedin className="text-black hover:text-red-500" size={"100%"} />
           </a>
-          <a className="w-[5rem]" href="">
+          <a className="w-[5rem]"  rel="noreferrer"
+                  target={"_blank"}
+                  href="https://twitter.com/Jadent_dev">
           <AiFillTwitterCircle className="text-black hover:text-red-500" size={"100%"} />
           </a>
-          <a className="w-[5rem]" href="">
+          <a className="w-[5rem]"  rel="noreferrer"
+                  target={"_blank"}
+                  href="mailto: rodriguez@jadent.dev">
           <AiFillMail className="text-black hover:text-red-500" size={"100%"} />
           </a>
         </div>

@@ -2,7 +2,7 @@ import React from "react";
 import { HiOutlineMail } from "react-icons/hi";
 import {
   AiOutlineLinkedin,
-  AiFillGithub,
+  AiOutlineGithub,
   AiOutlineTwitter,
 } from "react-icons/ai";
 export default function Contact() {
@@ -31,7 +31,6 @@ export default function Contact() {
                 <a
                   rel="noreferrer"
                   target={"_blank"}
-                  className=""
                   href="mailto: rodriguez@jadent.dev"
                 >
                   rodriguez@jadent.dev
@@ -41,7 +40,7 @@ export default function Contact() {
           </div>
           <div className="lg:h-44 h-36  mt-8 border-black bg-white rounded-xl w-[45%] border-2 relative">
             <div className=" absolute border-4 right-0  mx-auto left-0 bg-red-500 text-white  top-[-1.5rem] lg:top-[-2.5rem]  h-fit my-auto border-black p-2 lg:w-[5rem] w-[4rem] rounded-full">
-              <HiOutlineMail size={"100%"} />
+              <  AiOutlineGithub size={"100%"} />
             </div>
             <div className="flex flex-col justify-center h-full">
               <h3 className=" text-center text-3xl font-semibold">LinkedIn:</h3>
@@ -58,7 +57,7 @@ export default function Contact() {
           </div>
           <div className="lg:h-44 h-36 mt-8 border-black bg-white rounded-xl w-[45%] border-2 relative">
             <div className=" absolute border-4 right-0  mx-auto left-0 bg-red-500 text-white  top-[-1.5rem] lg:top-[-2.5rem]  h-fit my-auto border-black p-2 lg:w-[5rem] w-[4rem] rounded-full">
-              <HiOutlineMail size={"100%"} />
+              <AiOutlineLinkedin size={"100%"} />
             </div>
             <div className="flex flex-col justify-center h-full">
               <h3 className=" text-center text-3xl font-semibold">Github</h3>
@@ -84,7 +83,6 @@ export default function Contact() {
                 <a
                   rel="noreferrer"
                   target={"_blank"}
-                  className=""
                   href="https://twitter.com/Jadent_dev"
                 >
                   Jadent_dev
