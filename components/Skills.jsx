@@ -1,6 +1,7 @@
 import React from "react";
 import { BsCodeSlash, BsTerminal } from "react-icons/bs";
 import { FiDatabase } from "react-icons/fi";
+import Image from "next/image";
 export default function Skills() {
   const FeSkills = [
     "React.js",
@@ -100,7 +101,7 @@ export default function Skills() {
         </div>
       </div>
       <div className="lg:w-1/3 lg:block hidden">
-      <img  src="/skills.svg" alt="" />
+     <Image src={'/skills.svg'} width={500} height={250} />
       </div>
     </div>
   );
