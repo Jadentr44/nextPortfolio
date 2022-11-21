@@ -38,7 +38,7 @@ export default function Skills() {
           <div className="h-1 w-full bg-black"></div>
           <h1 className=" mx-2 lg:text-4xl text-3xl   ">Skills</h1>
           <div className="h-1 w-full bg-black"></div>
-          <img className="w-1/3 lg:hidden block" src="/skills.svg" alt="" />
+          <img className="w-1/3 lg:hidden block" src="/skills.png" alt="" />
         </div>
         <div className="flex flex-col md:flex-row justify-between mt-16">
           <div className="bg-white md:w-[33%] lg:w-[30%] border-2 rounded-2xl h-auto relative pb-8">
@@ -101,7 +101,7 @@ export default function Skills() {
         </div>
       </div>
       <div className="lg:w-1/3 lg:block hidden">
-     <Image src={'/skills.svg'} width={500} height={250} />
+     <img src={'/skills.png'}  />
       </div>
     </div>
   );
